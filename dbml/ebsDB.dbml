@@ -1,0 +1,489 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ebs" Class="ebsDBData" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=localhost;Initial Catalog=ebs;Persist Security Info=True;User ID=adp" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="ebsConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tbUsers" Member="tbUsers">
+    <Type Name="tbUsers">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="DisplayName" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="UserMail" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Mobile" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LoginCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Role" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Sys" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Region" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbSysRole" Member="tbSysRole">
+    <Type Name="tbSysRole">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Role" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbSysVenue" Member="tbSysVenue">
+    <Type Name="tbSysVenue">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VenueName" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Region" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbSysMenu" Member="tbSysMenu">
+    <Type Name="tbSysMenu">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MenuName" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="MenuPrice" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MenuDesc" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbSysMendian" Member="tbSysMendian">
+    <Type Name="tbSysMendian">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Mendian" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbSysYishiChangdi" Member="tbSysYishiChangdi">
+    <Type Name="tbSysYishiChangdi">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="YishiChangdi" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbSysHunqinMenu" Member="tbSysHunqinMenu">
+    <Type Name="tbSysHunqinMenu">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="HunQinMenuName" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="HunQinMenuPrice" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbSysServicesHY" Member="tbSysServicesHY">
+    <Type Name="tbSysServicesHY">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ServiceName" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbSysServicesHQ" Member="tbSysServicesHQ">
+    <Type Name="tbSysServicesHQ">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ServiceName" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AuditRecords" Member="AuditRecords">
+    <Type Name="AuditRecords">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OrderID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AuditDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="AuditUser" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="AuditLevel" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="AuditType" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="AuditResult" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="AuditSuggest" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="AuditPriority" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="WeddingOrders_AuditRecords" Member="WeddingOrders" ThisKey="OrderID" OtherKey="ID" Type="WeddingOrders" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbSysAuditConfig" Member="tbSysAuditConfig">
+    <Type Name="tbSysAuditConfig">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NeedRole" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="ConditionMin" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="ConditionMax" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="priority" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.WeddingExtraPayContent" Member="WeddingExtraPayContent">
+    <Type Name="WeddingExtraPayContent">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OrderID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Caijin" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="CaijinZhuoshu" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Jiushui" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="JiushuiZhuoshu" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="WeikuanDikou" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="EXzhuohua" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="EXqita" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Association Name="WeddingOrders_WeddingExtraPayContent" Member="WeddingOrders" ThisKey="OrderID" OtherKey="ID" Type="WeddingOrders" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.WeddingOrdersLogs" Member="WeddingOrdersLogs">
+    <Type Name="WeddingOrdersLogs">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OrderID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="UserRole" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="ActionName" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="ActionType" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Comments" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="WeddingOrders_WeddingOrdersLogs" Member="WeddingOrders" ThisKey="OrderID" OtherKey="ID" Type="WeddingOrders" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbWeddingOrdersRevision" Member="tbWeddingOrdersRevision">
+    <Type Name="tbWeddingOrdersRevision">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ContractID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OrderID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OrderName" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbSysAuditModifyConfig" Member="tbSysAuditModifyConfig">
+    <Type Name="tbSysAuditModifyConfig">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Role" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Priority" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbSysStandardWeddingDateLevel" Member="tbSysStandardWeddingDateLevel">
+    <Type Name="tbSysStandardWeddingDateLevel">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="DateLevel" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbSysStandardWeddingPrice" Member="tbSysStandardWeddingPrice">
+    <Type Name="tbSysStandardWeddingPrice">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StandardPrice" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="VenueName" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="DateLevel" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbSysEventType" Member="tbSysEventType">
+    <Type Name="tbSysEventType">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Type" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbSysQudao" Member="tbSysQudao">
+    <Type Name="tbSysQudao">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Qudao" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Cate" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Customers" Member="Customers">
+    <Type Name="Customers">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Source" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="SourceNb" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="ZixunDiDian" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="CustomerName" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Company" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Telephone" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="QQNb" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="CustomerType" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Zhuoshu" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="EventDate" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Yuyue" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Zhuangtai" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="DaoDianCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NeedHuiFang" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Xiafashijian" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Sales" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Kefu" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Beizhu" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="KefuFollow" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="AuditType" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="AuditContent" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="AuditStatus" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Association Name="Customers_CustomerFollowBySales" Member="CustomerFollowBySales" ThisKey="ID" OtherKey="MainID" Type="CustomerFollowBySales" />
+      <Association Name="Customers_CustomerFollowBySales_Bussiness" Member="CustomerFollowBySales_Bussiness" ThisKey="ID" OtherKey="MainID" Type="CustomerFollowBySales_Bussiness" />
+      <Association Name="Customers_CustomerRecords" Member="CustomerRecords" ThisKey="ID" OtherKey="MainID" Type="CustomerRecords" />
+      <Association Name="Customers_CustomerFollowByKefu" Member="CustomerFollowByKefu" ThisKey="ID" OtherKey="MainID" Type="CustomerFollowByKefu" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CustomerFollowBySales" Member="CustomerFollowBySales">
+    <Type Name="CustomerFollowBySales">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MainID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsDaoDian" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="DaoDianDate" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="isChengDan" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="SourceDiscount" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="FeedBack" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="FollowDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="UserRole" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Association Name="Customers_CustomerFollowBySales" Member="Customers" ThisKey="MainID" OtherKey="ID" Type="Customers" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CustomerFollowBySales_Bussiness" Member="CustomerFollowBySales_Bussiness">
+    <Type Name="CustomerFollowBySales_Bussiness">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MainID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="isChengDan" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="FollowDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Feedback" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="Customers_CustomerFollowBySales_Bussiness" Member="Customers" ThisKey="MainID" OtherKey="ID" Type="Customers" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CustomerRecords" Member="CustomerRecords">
+    <Type Name="CustomerRecords">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MainID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ModifyDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifyRecord" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="ModifyUser" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Association Name="Customers_CustomerRecords" Member="Customers" ThisKey="MainID" OtherKey="ID" Type="Customers" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CustomerFollowByKefu" Member="CustomerFollowByKefu">
+    <Type Name="CustomerFollowByKefu">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MainID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HuiFangRiqi" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="HuiFangKefu" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="HuiFangXinxi" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="FollowDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="UserRole" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Association Name="Customers_CustomerFollowByKefu" Member="Customers" ThisKey="MainID" OtherKey="ID" Type="Customers" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BussinessEventFormat" Member="BussinessEventFormat">
+    <Type Name="BussinessEventFormat">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MainID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EventFormat" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Yongcan" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Venue" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Dajianfei" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Changdifei" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Canbiao" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ShuiliangA" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DanweiA" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Jiushui" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ShuiliangB" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DanweiB" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Association Name="Bussiness_BussinessEventFormat" Member="Bussiness" ThisKey="MainID" OtherKey="ID" Type="Bussiness" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbSysYongcan" Member="tbSysYongcan">
+    <Type Name="tbSysYongcan">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="YongcanType" Type="System.String" DbType="NVarChar(300) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbSysAuditConfig_Bussiness" Member="tbSysAuditConfig_Bussiness">
+    <Type Name="tbSysAuditConfig_Bussiness">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Role" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Priority" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BussinessAuditRecords" Member="BussinessAuditRecords">
+    <Type Name="BussinessAuditRecords">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OrderID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AuditDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="AuditLevel" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="AuditPriority" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AuditResult" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="AuditUser" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="AuditSuggest" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="AuditType" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Association Name="Bussiness_BussinessAuditRecords" Member="Bussiness" ThisKey="OrderID" OtherKey="ID" Type="Bussiness" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BussinessAuditRevision" Member="BussinessAuditRevision">
+    <Type Name="BussinessAuditRevision">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ContractID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OrderID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OrderName" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbRili" Member="tbRili">
+    <Type Name="tbRili">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Status" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="Can" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Renshu" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="SalesName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="yishiChangdi" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="EndDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Miaoshu" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Source" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IsConfirmed" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MainID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Jine" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="yanhuiting" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Type" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BussinessOrderLogs" Member="BussinessOrderLogs">
+    <Type Name="BussinessOrderLogs">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OrderID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="UserRole" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="ActionName" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="ActionType" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Comments" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="Bussiness_BussinessOrderLogs" Member="Bussiness" ThisKey="OrderID" OtherKey="ID" Type="Bussiness" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BussinessPayment" Member="BussinessPayment">
+    <Type Name="BussinessPayment">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OrderID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PayNo" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="PayType" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="PayDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="PayAmount" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Zhuangtai" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Association Name="Bussiness_BussinessPayment" Member="Bussiness" ThisKey="OrderID" OtherKey="ID" Type="Bussiness" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Bussiness" Member="Bussiness">
+    <Type Name="Bussiness">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MainID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Zhuangtai" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="HetongID" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="HetongDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Company" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Qudaobeizhu" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="Lianxiren1" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Lianxiren1_Zuoji" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Lianxiren1_Shouji" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Lianxiren2" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Lianxiren2_Zuoji" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Lianxiren2_Shouji" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="EventVenue" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Sales" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="EventName" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="EventDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="EventType" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Dabaodanjia" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Dabaodanjia_ren" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Otherfee1" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Otherfee1_Amount" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Otherfee2" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Otherfee2_Amount" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Otherfee3" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Otherfee3_Amount" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Zhekou" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Fanyong" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="IsChengdan" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Bussiness_BussinessEventFormat" Member="BussinessEventFormat" ThisKey="ID" OtherKey="MainID" Type="BussinessEventFormat" />
+      <Association Name="Bussiness_BussinessAuditRecords" Member="BussinessAuditRecords" ThisKey="ID" OtherKey="OrderID" Type="BussinessAuditRecords" />
+      <Association Name="Bussiness_BussinessOrderLogs" Member="BussinessOrderLogs" ThisKey="ID" OtherKey="OrderID" Type="BussinessOrderLogs" />
+      <Association Name="Bussiness_BussinessPayment" Member="BussinessPayment" ThisKey="ID" OtherKey="OrderID" Type="BussinessPayment" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BussinessAdditionalForSW" Member="BussinessAdditionalForSW">
+    <Type Name="BussinessAdditionalForSW">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Hangye" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="Lianxiren1" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="Zuoji1" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="Shouji1" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="Youjian1" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="Zhiwei1" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="Lianxiren2" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="Zuoji2" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="Shouji2" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="Youjian2" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="Zhiwei2" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="Dizhi" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="BussinessID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BussinessFiles" Member="BussinessFiles">
+    <Type Name="BussinessFiles">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BussinessID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FileName" Type="System.String" DbType="NVarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="FilePath" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDt" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.WeddingFiles" Member="WeddingFiles">
+    <Type Name="WeddingFiles">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="WeddingID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FileName" Type="System.String" DbType="NVarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="FilePath" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDt" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.WeddingOrders" Member="WeddingOrders">
+    <Type Name="WeddingOrders">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MainID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Zhuangtai" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="HunliDidian" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Sales" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="HetongID" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="HetongDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="HunliDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="XinlangName" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="XinLangMB" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="XinNiangName" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="XinNiangMB" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="YishiChangdi" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Yanhuiting" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="WuWanyan" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="HunyanTaocan" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="CaijinDanjia" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="CaijinZhuoshu" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="CaijinZhekou" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="JiushuiDanjia" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="JiushuiZhuoshu" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="JiushuiZhekou" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="HunqinTaocan" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Hunqin" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Zhuohua" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Qita" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="DingjinDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="DingjinPercentHunyan" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="DingjinAmountHunyan" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DingjinPercentHunqin" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="DingjinAmoutHunqin" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ZhongkuanDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="ZhongkuanPercentHunyan" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="ZhongkuanAmountHunyan" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ZhongkuanPercentHunqin" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="ZhongkuanAmountHunqin" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="WeikuanDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="WeikuanPercentHunyan" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="WeikuanAmountHunyan" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="WeikuanPercentHunqin" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="WeikuanAmountHunqin" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="HunQinServices" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="HunYanServices" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="BuchongXinxi" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="HunyanZongJine" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="tempid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="paymentid" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Association Name="WeddingOrders_AuditRecords" Member="AuditRecords" ThisKey="ID" OtherKey="OrderID" Type="AuditRecords" />
+      <Association Name="WeddingOrders_WeddingExtraPayContent" Member="WeddingExtraPayContent" ThisKey="ID" OtherKey="OrderID" Type="WeddingExtraPayContent" />
+      <Association Name="WeddingOrders_WeddingOrdersLogs" Member="WeddingOrdersLogs" ThisKey="ID" OtherKey="OrderID" Type="WeddingOrdersLogs" />
+      <Association Name="WeddingOrders_WeddingPayment" Member="WeddingPayment" ThisKey="ID" OtherKey="OrderID" Type="WeddingPayment" />
+    </Type>
+  </Table>
+  <Table Name="dbo.WeddingPayment" Member="WeddingPayment">
+    <Type Name="WeddingPayment">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OrderID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PayType" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="PayDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="ShishouHY" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="ShishouHQ" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Zhuangtai" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="PayOrderNumber" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Association Name="WeddingOrders_WeddingPayment" Member="WeddingOrders" ThisKey="OrderID" OtherKey="ID" Type="WeddingOrders" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

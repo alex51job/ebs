@@ -1,0 +1,1003 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9D184C66-D902-49F5-B0E9-FAB1064C4835}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ebs</RootNamespace>
+    <AssemblyName>ebs</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EPPlus, Version=4.0.4.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Linq.Dynamic, Version=1.0.5840.25917, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\System.Linq.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\ChangePassword.aspx" />
+    <Content Include="Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="bootstrapValidator\dist\css\bootstrapValidator.css" />
+    <Content Include="bootstrapValidator\dist\css\bootstrapValidator.min.css" />
+    <Content Include="bootstrapValidator\dist\js\bootstrapValidator.js" />
+    <Content Include="bootstrapValidator\dist\js\bootstrapValidator.min.js" />
+    <Content Include="bootstrapValidator\dist\js\language\be_NL.js" />
+    <Content Include="bootstrapValidator\dist\js\language\bg_BG.js" />
+    <Content Include="bootstrapValidator\dist\js\language\cs_CZ.js" />
+    <Content Include="bootstrapValidator\dist\js\language\de_DE.js" />
+    <Content Include="bootstrapValidator\dist\js\language\en_US.js" />
+    <Content Include="bootstrapValidator\dist\js\language\es_CL.js" />
+    <Content Include="bootstrapValidator\dist\js\language\es_ES.js" />
+    <Content Include="bootstrapValidator\dist\js\language\fr_FR.js" />
+    <Content Include="bootstrapValidator\dist\js\language\gr_EL.js" />
+    <Content Include="bootstrapValidator\dist\js\language\hu_HU.js" />
+    <Content Include="bootstrapValidator\dist\js\language\it_IT.js" />
+    <Content Include="bootstrapValidator\dist\js\language\pl_PL.js" />
+    <Content Include="bootstrapValidator\dist\js\language\pt_BR.js" />
+    <Content Include="bootstrapValidator\dist\js\language\tr_TR.js" />
+    <Content Include="bootstrapValidator\dist\js\language\vi_VN.js" />
+    <Content Include="bootstrapValidator\dist\js\language\zh_CN.js" />
+    <Content Include="bootstrapValidator\dist\js\language\zh_TW.js" />
+    <Content Include="Default.aspx" />
+    <Content Include="Default.js" />
+    <Content Include="images\food.png" />
+    <Content Include="images\food1.png" />
+    <Content Include="images\rili.png" />
+    <Content Include="images\site.png" />
+    <Content Include="images\site1.png" />
+    <Content Include="images\site2.png" />
+    <Content Include="Login.aspx" />
+    <Content Include="datetimepicker\css\bootstrap-datetimepicker.css" />
+    <Content Include="datetimepicker\css\bootstrap-datetimepicker.min.css" />
+    <Content Include="datetimepicker\js\bootstrap-datetimepicker.js" />
+    <Content Include="datetimepicker\js\bootstrap-datetimepicker.min.js" />
+    <Content Include="datetimepicker\js\locales\bootstrap-datetimepicker.ar.js" />
+    <Content Include="datetimepicker\js\locales\bootstrap-datetimepicker.bg.js" />
+    <Content Include="datetimepicker\js\locales\bootstrap-datetimepicker.ca.js" />
+    <Content Include="datetimepicker\js\locales\bootstrap-datetimepicker.cs.js" />
+    <Content Include="datetimepicker\js\locales\bootstrap-datetimepicker.da.js" />
+    <Content Include="datetimepicker\js\locales\bootstrap-datetimepicker.de.js" />
+    <Content Include="datetimepicker\js\locales\bootstrap-datetimepicker.ee.js" />
+    <Content Include="datetimepicker\js\locales\bootstrap-datetimepicker.el.js" />
+    <Content Include="datetimepicker\js\locales\bootstrap-datetimepicker.es.js" />
+    <Content Include="datetimepicker\js\locales\bootstrap-datetimepicker.fi.js" />
+    <Content Include="datetimepicker\js\locales\bootstrap-datetimepicker.fr.js" />
+    <Content Include="datetimepicker\js\locales\bootstrap-datetimepicker.he.js" />
+    <Content Include="datetimepicker\js\locales\bootstrap-datetimepicker.hr.js" />
+    <Content Include="datetimepicker\js\locales\bootstrap-datetimepicker.hu.js" />
+    <Content Include="datetimepicker\js\locales\bootstrap-datetimepicker.id.js" />
+    <Content Include="datetimepicker\js\locales\bootstrap-datetimepicker.is.js" />
+    <Content Include="datetimepicker\js\locales\bootstrap-datetimepicker.it.js" />
+    <Content Include="datetimepicker\js\locales\bootstrap-datetimepicker.ja.js" />
+    <Content Include="datetimepicker\js\locales\bootstrap-datetimepicker.ko.js" />
+    <Content Include="datetimepicker\js\locales\bootstrap-datetimepicker.lt.js" />
+    <Content Include="datetimepicker\js\locales\bootstrap-datetimepicker.lv.js" />
+    <Content Include="datetimepicker\js\locales\bootstrap-datetimepicker.ms.js" />
+    <Content Include="datetimepicker\js\locales\bootstrap-datetimepicker.nb.js" />
+    <Content Include="datetimepicker\js\locales\bootstrap-datetimepicker.nl.js" />
+    <Content Include="datetimepicker\js\locales\bootstrap-datetimepicker.no.js" />
+    <Content Include="datetimepicker\js\locales\bootstrap-datetimepicker.pl.js" />
+    <Content Include="datetimepicker\js\locales\bootstrap-datetimepicker.pt-BR.js" />
+    <Content Include="datetimepicker\js\locales\bootstrap-datetimepicker.pt.js" />
+    <Content Include="datetimepicker\js\locales\bootstrap-datetimepicker.ro.js" />
+    <Content Include="datetimepicker\js\locales\bootstrap-datetimepicker.rs-latin.js" />
+    <Content Include="datetimepicker\js\locales\bootstrap-datetimepicker.rs.js" />
+    <Content Include="datetimepicker\js\locales\bootstrap-datetimepicker.ru.js" />
+    <Content Include="datetimepicker\js\locales\bootstrap-datetimepicker.sk.js" />
+    <Content Include="datetimepicker\js\locales\bootstrap-datetimepicker.sl.js" />
+    <Content Include="datetimepicker\js\locales\bootstrap-datetimepicker.sv.js" />
+    <Content Include="datetimepicker\js\locales\bootstrap-datetimepicker.sw.js" />
+    <Content Include="datetimepicker\js\locales\bootstrap-datetimepicker.th.js" />
+    <Content Include="datetimepicker\js\locales\bootstrap-datetimepicker.tr.js" />
+    <Content Include="datetimepicker\js\locales\bootstrap-datetimepicker.ua.js" />
+    <Content Include="datetimepicker\js\locales\bootstrap-datetimepicker.uk.js" />
+    <Content Include="datetimepicker\js\locales\bootstrap-datetimepicker.zh-CN.js" />
+    <Content Include="datetimepicker\js\locales\bootstrap-datetimepicker.zh-TW.js" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="font\font-awesome\css\font-awesome.css" />
+    <Content Include="font\font-awesome\css\font-awesome.min.css" />
+    <Content Include="font\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="images\140x140.gif" />
+    <Content Include="images\170x170.gif" />
+    <Content Include="images\blog\442256_20337880.jpg" />
+    <Content Include="images\blog\472381_10949156.jpg" />
+    <Content Include="images\blog\503993_62595320.jpg" />
+    <Content Include="images\blog\625998_12886207.jpg" />
+    <Content Include="images\blog\737034_24905666.jpg" />
+    <Content Include="images\blog\789080_16753532.jpg" />
+    <Content Include="images\blog\888272_30368604.jpg" />
+    <Content Include="images\blog\images.txt" />
+    <Content Include="images\customer.png" />
+    <Content Include="images\Delphi_ Logo_White.PNG" />
+    <Content Include="images\faces\1a.png" />
+    <Content Include="images\faces\1b.png" />
+    <Content Include="images\faces\2a.png" />
+    <Content Include="images\faces\2b.png" />
+    <Content Include="images\faces\3a.png" />
+    <Content Include="images\faces\3b.png" />
+    <Content Include="images\faces\4a.png" />
+    <Content Include="images\faces\4b.png" />
+    <Content Include="images\faces\5b.png" />
+    <Content Include="images\faces\6b.png" />
+    <Content Include="images\faces\7b.jpg" />
+    <Content Include="images\faces\images.txt" />
+    <Content Include="images\gallery\319768_8498.jpg" />
+    <Content Include="images\gallery\403944_5580.jpg" />
+    <Content Include="images\gallery\43616_6206.jpg" />
+    <Content Include="images\gallery\442256_20337880.jpg" />
+    <Content Include="images\gallery\463600_31373324.jpg" />
+    <Content Include="images\gallery\472381_10949156.jpg" />
+    <Content Include="images\gallery\485382_81894547.jpg" />
+    <Content Include="images\gallery\503993_62595320.jpg" />
+    <Content Include="images\gallery\544337_83543416.jpg" />
+    <Content Include="images\gallery\625998_12886207.jpg" />
+    <Content Include="images\gallery\737034_24905666.jpg" />
+    <Content Include="images\gallery\760375_32906821.jpg" />
+    <Content Include="images\gallery\789080_16753532.jpg" />
+    <Content Include="images\gallery\888272_30368604.jpg" />
+    <Content Include="images\gallery\images.txt" />
+    <Content Include="images\less.png" />
+    <Content Include="images\loading-icons\images.txt" />
+    <Content Include="images\loading-icons\loading1.gif" />
+    <Content Include="images\loading-icons\loading10.gif" />
+    <Content Include="images\loading-icons\loading2.gif" />
+    <Content Include="images\loading-icons\loading3.gif" />
+    <Content Include="images\loading-icons\loading4.gif" />
+    <Content Include="images\loading-icons\loading5.gif" />
+    <Content Include="images\loading-icons\loading6.gif" />
+    <Content Include="images\loading-icons\loading7.gif" />
+    <Content Include="images\loading-icons\loading8.gif" />
+    <Content Include="images\loading-icons\loading9.gif" />
+    <Content Include="images\loading.gif" />
+    <Content Include="images\media\1.jpg" />
+    <Content Include="images\media\3.jpg" />
+    <Content Include="images\media\5.jpg" />
+    <Content Include="images\media\6.jpg" />
+    <Content Include="images\middleman.png" />
+    <Content Include="images\people\1083978.jpg" />
+    <Content Include="images\people\1139155.jpg" />
+    <Content Include="images\people\1170492.jpg" />
+    <Content Include="images\people\1192482.jpg" />
+    <Content Include="images\people\1205972.jpg" />
+    <Content Include="images\people\1208847.jpg" />
+    <Content Include="images\people\1248972.jpg" />
+    <Content Include="images\people\471397.jpg" />
+    <Content Include="images\people\653195.jpg" />
+    <Content Include="images\people\671385.jpg" />
+    <Content Include="images\people\764343.jpg" />
+    <Content Include="images\people\797762.jpg" />
+    <Content Include="images\people\912129.jpg" />
+    <Content Include="images\people\923068.jpg" />
+    <Content Include="images\preview\10.png" />
+    <Content Include="images\preview\11.png" />
+    <Content Include="images\preview\12.png" />
+    <Content Include="images\preview\13.png" />
+    <Content Include="images\preview\8.png" />
+    <Content Include="images\preview\9.png" />
+    <Content Include="images\tumblr_mopqkkwK2M1st5lhmo1_1280.jpg" />
+    <Content Include="images\Users.png" />
+    <Content Include="images\venue.png" />
+    <Content Include="MoKuai_admin\AdminPanel.aspx" />
+    <Content Include="MoKuai_admin\CaidanEdit.aspx" />
+    <Content Include="MoKuai_admin\CaidanList.aspx" />
+    <Content Include="MoKuai_admin\ChangdiEdit.aspx" />
+    <Content Include="MoKuai_admin\ChangdiList.aspx" />
+    <Content Include="MoKuai_admin\MyProfile.aspx" />
+    <Content Include="MoKuai_admin\YonghuEdit.aspx" />
+    <Content Include="MoKuai_admin\YonghuList.aspx" />
+    <Content Include="MoKuai_Hunli\hlAuditFinance.aspx" />
+    <Content Include="MoKuai_Hunli\hlAuditFinance.js" />
+    <Content Include="MoKuai_Hunli\hlPaymentsScripts.js" />
+    <Content Include="MoKuai_Hunli\hlScripts.js" />
+    <Content Include="MoKuai_Hunli\HunliAudit.aspx" />
+    <Content Include="MoKuai_Hunli\HunliEditAddedPay.aspx" />
+    <Content Include="MoKuai_Hunli\HunliEdit.aspx" />
+    <Content Include="MoKuai_Hunli\HunliList.aspx" />
+    <Content Include="MoKuai_Hunli\HunliPayments.aspx" />
+    <Content Include="MoKuai_Report\ReportMain.aspx" />
+    <Content Include="MoKuai_Hunli\taginput.aspx" />
+    <Content Include="MoKuai_Kehu\KehuEdit.aspx" />
+    <Content Include="MoKuai_Kehu\KehuFollowBussiness.aspx" />
+    <Content Include="MoKuai_Kehu\KehuFollowWedding.aspx" />
+    <Content Include="MoKuai_Kehu\KehuList.aspx" />
+    <Content Include="MoKuai_Kehu\KehuListAudit.aspx" />
+    <Content Include="MoKuai_Report\ReportScripts.js" />
+    <Content Include="MoKuai_Rili\bs3.html" />
+    <Content Include="MoKuai_Rili\components\bootstrap2\css\bootstrap-responsive.css" />
+    <Content Include="MoKuai_Rili\components\bootstrap2\css\bootstrap.css" />
+    <Content Include="MoKuai_Rili\components\bootstrap2\img\glyphicons-halflings-white.png" />
+    <Content Include="MoKuai_Rili\components\bootstrap2\img\glyphicons-halflings.png" />
+    <Content Include="MoKuai_Rili\components\bootstrap2\js\bootstrap.min.js" />
+    <Content Include="MoKuai_Rili\components\bootstrap3\css\bootstrap-theme.css" />
+    <Content Include="MoKuai_Rili\components\bootstrap3\css\bootstrap-theme.min.css" />
+    <Content Include="MoKuai_Rili\components\bootstrap3\css\bootstrap.css" />
+    <Content Include="MoKuai_Rili\components\bootstrap3\css\bootstrap.min.css" />
+    <Content Include="MoKuai_Rili\components\bootstrap3\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="MoKuai_Rili\components\bootstrap3\js\bootstrap.js" />
+    <Content Include="MoKuai_Rili\components\bootstrap3\js\bootstrap.min.js" />
+    <Content Include="MoKuai_Rili\components\jquery\jquery.min.js" />
+    <Content Include="MoKuai_Rili\components\jstimezonedetect\jstz.js" />
+    <Content Include="MoKuai_Rili\components\jstimezonedetect\jstz.min.js" />
+    <Content Include="MoKuai_Rili\components\jstimezonedetect\LICENCE.txt" />
+    <Content Include="MoKuai_Rili\components\underscore\underscore-min.js" />
+    <Content Include="MoKuai_Rili\css\calendar.css" />
+    <Content Include="MoKuai_Rili\css\calendar.min.css" />
+    <Content Include="MoKuai_Rili\EventList.aspx" />
+    <Content Include="MoKuai_Rili\img\dark_wood.png" />
+    <Content Include="MoKuai_Rili\img\slide-bg.png" />
+    <Content Include="MoKuai_Rili\img\tick.png" />
+    <Content Include="MoKuai_Rili\js\app.js" />
+    <Content Include="MoKuai_Rili\js\calendar.js" />
+    <Content Include="MoKuai_Rili\js\calendar.min.js" />
+    <Content Include="MoKuai_Rili\js\language\bs-BA.js" />
+    <Content Include="MoKuai_Rili\js\language\cs-CZ.js" />
+    <Content Include="MoKuai_Rili\js\language\da-DK.js" />
+    <Content Include="MoKuai_Rili\js\language\de-AT.js" />
+    <Content Include="MoKuai_Rili\js\language\de-DE.js" />
+    <Content Include="MoKuai_Rili\js\language\el-GR.js" />
+    <Content Include="MoKuai_Rili\js\language\es-ES.js" />
+    <Content Include="MoKuai_Rili\js\language\es-MX.js" />
+    <Content Include="MoKuai_Rili\js\language\fi-FI.js" />
+    <Content Include="MoKuai_Rili\js\language\fr-FR.js" />
+    <Content Include="MoKuai_Rili\js\language\hr-HR.js" />
+    <Content Include="MoKuai_Rili\js\language\it-IT.js" />
+    <Content Include="MoKuai_Rili\js\language\ja-JP.js" />
+    <Content Include="MoKuai_Rili\js\language\ko-KR.js" />
+    <Content Include="MoKuai_Rili\js\language\nl-NL.js" />
+    <Content Include="MoKuai_Rili\js\language\no-NO.js" />
+    <Content Include="MoKuai_Rili\js\language\pl-PL.js" />
+    <Content Include="MoKuai_Rili\js\language\pt-BR.js" />
+    <Content Include="MoKuai_Rili\js\language\ro-RO.js" />
+    <Content Include="MoKuai_Rili\js\language\ru-RU.js" />
+    <Content Include="MoKuai_Rili\js\language\sl-SL.js" />
+    <Content Include="MoKuai_Rili\js\language\sv-SE.js" />
+    <Content Include="MoKuai_Rili\js\language\template.js" />
+    <Content Include="MoKuai_Rili\js\language\tr-TR.js" />
+    <Content Include="MoKuai_Rili\js\language\zh-CN.js" />
+    <Content Include="MoKuai_Rili\Rili.aspx" />
+    <Content Include="MoKuai_Rili\Rili.htm" />
+    <Content Include="MoKuai_Rili\tmpls\day.html" />
+    <Content Include="MoKuai_Rili\tmpls\events-list.html" />
+    <Content Include="MoKuai_Rili\tmpls\modal.html" />
+    <Content Include="MoKuai_Rili\tmpls\month-day.html" />
+    <Content Include="MoKuai_Rili\tmpls\month.html" />
+    <Content Include="MoKuai_Rili\tmpls\week-days.html" />
+    <Content Include="MoKuai_Rili\tmpls\week.html" />
+    <Content Include="MoKuai_Rili\tmpls\year-month.html" />
+    <Content Include="MoKuai_Rili\tmpls\year.html" />
+    <Content Include="MoKuai_Shangwu\Shangwu.js" />
+    <Content Include="MoKuai_Shangwu\ShangwuAudit.aspx" />
+    <Content Include="MoKuai_Shangwu\ShangwuEdit.aspx" />
+    <Content Include="MoKuai_Shangwu\ShangwuKehuList.aspx" />
+    <Content Include="MoKuai_Shangwu\ShangwuList.aspx" />
+    <Content Include="MoKuai_Shangwu\ShangwuPayments.aspx" />
+    <Content Include="MoKuai_Shangwu\SWAuditFinance.aspx" />
+    <Content Include="MoKuai_Shangwu\SWAuditFinance.js" />
+    <Content Include="MoKuai_Shangwu\swpayments.js" />
+    <Content Include="MoKuai_Shangwu\upload.aspx" />
+    <Content Include="Register\pasReset.aspx" />
+    <Content Include="Register\pwService.aspx" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\filer\jquery.filer.js" />
+    <Content Include="Scripts\filer\jquery.filer.min.js" />
+    <Content Include="Scripts\highcharts.js" />
+    <Content Include="Scripts\jquery-1.11.2.min.js" />
+    <Content Include="Scripts\jquery-1.8.2.js" />
+    <Content Include="Scripts\jQuery-Knob\index.html" />
+    <Content Include="Scripts\jQuery-Knob\js\jquery.knob.js" />
+    <Content Include="Scripts\jquery-ui-1.9.2.custom.min.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\modules\canvas-tools.js" />
+    <Content Include="Scripts\modules\canvas-tools.src.js" />
+    <Content Include="Scripts\modules\data.js" />
+    <Content Include="Scripts\modules\data.src.js" />
+    <Content Include="Scripts\modules\drilldown.js" />
+    <Content Include="Scripts\modules\drilldown.src.js" />
+    <Content Include="Scripts\modules\exporting.js" />
+    <Content Include="Scripts\modules\exporting.src.js" />
+    <Content Include="Scripts\modules\funnel.js" />
+    <Content Include="Scripts\modules\funnel.src.js" />
+    <Content Include="Scripts\modules\heatmap.js" />
+    <Content Include="Scripts\modules\heatmap.src.js" />
+    <Content Include="Scripts\modules\no-data-to-display.js" />
+    <Content Include="Scripts\modules\no-data-to-display.src.js" />
+    <Content Include="Scripts\modules\solid-gauge.js" />
+    <Content Include="Scripts\modules\solid-gauge.src.js" />
+    <Content Include="Scripts\select2-3.5.2\select2-bootstrap.css" />
+    <Content Include="Scripts\select2-3.5.2\select2-spinner.gif" />
+    <Content Include="Scripts\select2-3.5.2\select2.css" />
+    <Content Include="Scripts\select2-3.5.2\select2.js" />
+    <Content Include="Scripts\select2-3.5.2\select2.min.js" />
+    <Content Include="Scripts\select2-3.5.2\select2.png" />
+    <Content Include="Scripts\select2-3.5.2\select2x2.png" />
+    <Content Include="Scripts\select2-3.5.2\select2_locale_ar.js" />
+    <Content Include="Scripts\select2-3.5.2\select2_locale_az.js" />
+    <Content Include="Scripts\select2-3.5.2\select2_locale_bg.js" />
+    <Content Include="Scripts\select2-3.5.2\select2_locale_ca.js" />
+    <Content Include="Scripts\select2-3.5.2\select2_locale_cs.js" />
+    <Content Include="Scripts\select2-3.5.2\select2_locale_da.js" />
+    <Content Include="Scripts\select2-3.5.2\select2_locale_de.js" />
+    <Content Include="Scripts\select2-3.5.2\select2_locale_el.js" />
+    <Content Include="Scripts\select2-3.5.2\select2_locale_es.js" />
+    <Content Include="Scripts\select2-3.5.2\select2_locale_et.js" />
+    <Content Include="Scripts\select2-3.5.2\select2_locale_eu.js" />
+    <Content Include="Scripts\select2-3.5.2\select2_locale_fa.js" />
+    <Content Include="Scripts\select2-3.5.2\select2_locale_fi.js" />
+    <Content Include="Scripts\select2-3.5.2\select2_locale_fr.js" />
+    <Content Include="Scripts\select2-3.5.2\select2_locale_gl.js" />
+    <Content Include="Scripts\select2-3.5.2\select2_locale_he.js" />
+    <Content Include="Scripts\select2-3.5.2\select2_locale_hr.js" />
+    <Content Include="Scripts\select2-3.5.2\select2_locale_hu.js" />
+    <Content Include="Scripts\select2-3.5.2\select2_locale_id.js" />
+    <Content Include="Scripts\select2-3.5.2\select2_locale_is.js" />
+    <Content Include="Scripts\select2-3.5.2\select2_locale_it.js" />
+    <Content Include="Scripts\select2-3.5.2\select2_locale_ja.js" />
+    <Content Include="Scripts\select2-3.5.2\select2_locale_ka.js" />
+    <Content Include="Scripts\select2-3.5.2\select2_locale_ko.js" />
+    <Content Include="Scripts\select2-3.5.2\select2_locale_lt.js" />
+    <Content Include="Scripts\select2-3.5.2\select2_locale_lv.js" />
+    <Content Include="Scripts\select2-3.5.2\select2_locale_mk.js" />
+    <Content Include="Scripts\select2-3.5.2\select2_locale_ms.js" />
+    <Content Include="Scripts\select2-3.5.2\select2_locale_nb.js" />
+    <Content Include="Scripts\select2-3.5.2\select2_locale_nl.js" />
+    <Content Include="Scripts\select2-3.5.2\select2_locale_pl.js" />
+    <Content Include="Scripts\select2-3.5.2\select2_locale_pt-BR.js" />
+    <Content Include="Scripts\select2-3.5.2\select2_locale_pt-PT.js" />
+    <Content Include="Scripts\select2-3.5.2\select2_locale_ro.js" />
+    <Content Include="Scripts\select2-3.5.2\select2_locale_rs.js" />
+    <Content Include="Scripts\select2-3.5.2\select2_locale_ru.js" />
+    <Content Include="Scripts\select2-3.5.2\select2_locale_sk.js" />
+    <Content Include="Scripts\select2-3.5.2\select2_locale_sv.js" />
+    <Content Include="Scripts\select2-3.5.2\select2_locale_th.js" />
+    <Content Include="Scripts\select2-3.5.2\select2_locale_tr.js" />
+    <Content Include="Scripts\select2-3.5.2\select2_locale_ug-CN.js" />
+    <Content Include="Scripts\select2-3.5.2\select2_locale_uk.js" />
+    <Content Include="Scripts\select2-3.5.2\select2_locale_vi.js" />
+    <Content Include="Scripts\select2-3.5.2\select2_locale_zh-CN.js" />
+    <Content Include="Scripts\select2-3.5.2\select2_locale_zh-TW.js" />
+    <Content Include="Scripts\select2.full.js" />
+    <Content Include="Scripts\standalone-framework.js" />
+    <Content Include="Scripts\standalone-framework.src.js" />
+    <Content Include="Scripts\themes\dark-blue.js" />
+    <Content Include="Scripts\themes\dark-green.js" />
+    <Content Include="Scripts\themes\dark-unica.js" />
+    <Content Include="Scripts\themes\gray.js" />
+    <Content Include="Scripts\themes\grid-light.js" />
+    <Content Include="Scripts\themes\grid.js" />
+    <Content Include="Scripts\themes\sand-signika.js" />
+    <Content Include="Scripts\themes\skies.js" />
+    <Content Include="select2\dist\css\select2.css" />
+    <Content Include="select2\dist\css\select2.min.css" />
+    <Content Include="select2\dist\js\i18n\az.js" />
+    <Content Include="select2\dist\js\i18n\bg.js" />
+    <Content Include="select2\dist\js\i18n\ca.js" />
+    <Content Include="select2\dist\js\i18n\cs.js" />
+    <Content Include="select2\dist\js\i18n\da.js" />
+    <Content Include="select2\dist\js\i18n\de.js" />
+    <Content Include="select2\dist\js\i18n\en.js" />
+    <Content Include="select2\dist\js\i18n\es.js" />
+    <Content Include="select2\dist\js\i18n\et.js" />
+    <Content Include="select2\dist\js\i18n\eu.js" />
+    <Content Include="select2\dist\js\i18n\fa.js" />
+    <Content Include="select2\dist\js\i18n\fi.js" />
+    <Content Include="select2\dist\js\i18n\fr.js" />
+    <Content Include="select2\dist\js\i18n\gl.js" />
+    <Content Include="select2\dist\js\i18n\hi.js" />
+    <Content Include="select2\dist\js\i18n\hr.js" />
+    <Content Include="select2\dist\js\i18n\hu.js" />
+    <Content Include="select2\dist\js\i18n\id.js" />
+    <Content Include="select2\dist\js\i18n\is.js" />
+    <Content Include="select2\dist\js\i18n\it.js" />
+    <Content Include="select2\dist\js\i18n\ko.js" />
+    <Content Include="select2\dist\js\i18n\lt.js" />
+    <Content Include="select2\dist\js\i18n\lv.js" />
+    <Content Include="select2\dist\js\i18n\mk.js" />
+    <Content Include="select2\dist\js\i18n\nb.js" />
+    <Content Include="select2\dist\js\i18n\nl.js" />
+    <Content Include="select2\dist\js\i18n\pl.js" />
+    <Content Include="select2\dist\js\i18n\pt-BR.js" />
+    <Content Include="select2\dist\js\i18n\pt.js" />
+    <Content Include="select2\dist\js\i18n\ro.js" />
+    <Content Include="select2\dist\js\i18n\ru.js" />
+    <Content Include="select2\dist\js\i18n\sk.js" />
+    <Content Include="select2\dist\js\i18n\sr.js" />
+    <Content Include="select2\dist\js\i18n\sv.js" />
+    <Content Include="select2\dist\js\i18n\th.js" />
+    <Content Include="select2\dist\js\i18n\tr.js" />
+    <Content Include="select2\dist\js\i18n\uk.js" />
+    <Content Include="select2\dist\js\i18n\vi.js" />
+    <Content Include="select2\dist\js\i18n\zh-CN.js" />
+    <Content Include="select2\dist\js\i18n\zh-TW.js" />
+    <Content Include="select2\dist\js\select2.full.js" />
+    <Content Include="select2\dist\js\select2.full.min.js" />
+    <Content Include="select2\dist\js\select2.js" />
+    <Content Include="select2\dist\js\select2.min.js" />
+    <Content Include="Styles\assets\fonts\jquery.filer-icons\jquery-filer-preview.html" />
+    <Content Include="Styles\assets\fonts\jquery.filer-icons\jquery-filer.css" />
+    <Content Include="Styles\assets\fonts\jquery.filer-icons\jquery-filer.svg" />
+    <Content Include="Styles\bootstrap-theme.min.css" />
+    <Content Include="Styles\bootstrap.min.css" />
+    <Content Include="Styles\dashboard.css" />
+    <Content Include="Styles\filer\jquery.filer.css" />
+    <Content Include="Styles\filer\themes\jquery.filer-dragdropbox-theme.css" />
+    <Content Include="Styles\jqueryui-custom-theme\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Styles\jqueryui-custom-theme\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Styles\jqueryui-custom-theme\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Styles\jqueryui-custom-theme\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Styles\jqueryui-custom-theme\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Styles\jqueryui-custom-theme\images\ui-bg_glass_75_ffffff_1x400.png" />
+    <Content Include="Styles\jqueryui-custom-theme\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Styles\jqueryui-custom-theme\images\ui-bg_inset-soft_95_fef1ec_1x100.png" />
+    <Content Include="Styles\jqueryui-custom-theme\images\ui-icons_222222_256x240.png" />
+    <Content Include="Styles\jqueryui-custom-theme\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Styles\jqueryui-custom-theme\images\ui-icons_454545_256x240.png" />
+    <Content Include="Styles\jqueryui-custom-theme\images\ui-icons_888888_256x240.png" />
+    <Content Include="Styles\jqueryui-custom-theme\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Styles\jqueryui-custom-theme\images\ui-icons_f6cf3b_256x240.png" />
+    <Content Include="Styles\jqueryui-custom-theme\jquery-ui-1.10.0.custom.css" />
+    <Content Include="Styles\jqueryui-custom-theme\jquery-ui-1.9.2.custom.css" />
+    <Content Include="Styles\jqueryui-custom-theme\jquery.ui.1.10.0.ie.css" />
+    <Content Include="Styles\jqueryui-custom-theme\jquery.ui.1.9.2.ie.css" />
+    <Content Include="Styles\premium.css" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Styles\theme.css" />
+    <Content Include="tokenfield\bootstrap-tokenfield.js" />
+    <Content Include="tokenfield\bootstrap-tokenfield.min.js" />
+    <Content Include="tokenfield\css\bootstrap-tokenfield.css" />
+    <Content Include="tokenfield\css\bootstrap-tokenfield.min.css" />
+    <Content Include="tokenfield\css\tokenfield-typeahead.css" />
+    <Content Include="tokenfield\css\tokenfield-typeahead.min.css" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.designer.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="commons\comCls.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="commons\ConvertStringsInDB.cs" />
+    <Compile Include="commons\ddlSet.cs" />
+    <Compile Include="commons\LoginChecker.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="commons\LoginCheckerMaster.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="commons\tabSet.cs" />
+    <Compile Include="dbml\ebsDB.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ebsDB.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Default.ashx.cs">
+      <DependentUpon>Default.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MoKuai_admin\admin.Master.cs">
+      <DependentUpon>admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MoKuai_admin\admin.Master.designer.cs">
+      <DependentUpon>admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MoKuai_admin\AdminPanel.aspx.cs">
+      <DependentUpon>AdminPanel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MoKuai_admin\AdminPanel.aspx.designer.cs">
+      <DependentUpon>AdminPanel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MoKuai_admin\CaidanEdit.aspx.cs">
+      <DependentUpon>CaidanEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MoKuai_admin\CaidanEdit.aspx.designer.cs">
+      <DependentUpon>CaidanEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MoKuai_admin\CaidanList.aspx.cs">
+      <DependentUpon>CaidanList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MoKuai_admin\CaidanList.aspx.designer.cs">
+      <DependentUpon>CaidanList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MoKuai_admin\ChangdiEdit.aspx.cs">
+      <DependentUpon>ChangdiEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MoKuai_admin\ChangdiEdit.aspx.designer.cs">
+      <DependentUpon>ChangdiEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MoKuai_admin\ChangdiList.aspx.cs">
+      <DependentUpon>ChangdiList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MoKuai_admin\ChangdiList.aspx.designer.cs">
+      <DependentUpon>ChangdiList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MoKuai_admin\MyProfile.aspx.cs">
+      <DependentUpon>MyProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MoKuai_admin\MyProfile.aspx.designer.cs">
+      <DependentUpon>MyProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MoKuai_admin\YonghuEdit.aspx.cs">
+      <DependentUpon>YonghuEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MoKuai_admin\YonghuEdit.aspx.designer.cs">
+      <DependentUpon>YonghuEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MoKuai_admin\YonghuList.aspx.cs">
+      <DependentUpon>YonghuList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MoKuai_admin\YonghuList.aspx.designer.cs">
+      <DependentUpon>YonghuList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MoKuai_Hunli\hlAuditFinance.aspx.cs">
+      <DependentUpon>hlAuditFinance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MoKuai_Hunli\hlAuditFinance.aspx.designer.cs">
+      <DependentUpon>hlAuditFinance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MoKuai_Hunli\HLPaymentAjax.ashx.cs">
+      <DependentUpon>HLPaymentAjax.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="MoKuai_Hunli\Hunli.Master.cs">
+      <DependentUpon>Hunli.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MoKuai_Hunli\Hunli.Master.designer.cs">
+      <DependentUpon>Hunli.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MoKuai_Hunli\HunliAjax.ashx.cs">
+      <DependentUpon>HunliAjax.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="MoKuai_Hunli\HunliAudit.aspx.cs">
+      <DependentUpon>HunliAudit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MoKuai_Hunli\HunliAudit.aspx.designer.cs">
+      <DependentUpon>HunliAudit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MoKuai_Hunli\HunliEditAddedPay.aspx.cs">
+      <DependentUpon>HunliEditAddedPay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MoKuai_Hunli\HunliEditAddedPay.aspx.designer.cs">
+      <DependentUpon>HunliEditAddedPay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MoKuai_Hunli\HunliEdit.aspx.cs">
+      <DependentUpon>HunliEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MoKuai_Hunli\HunliEdit.aspx.designer.cs">
+      <DependentUpon>HunliEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MoKuai_Hunli\HunliList.aspx.cs">
+      <DependentUpon>HunliList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MoKuai_Hunli\HunliList.aspx.designer.cs">
+      <DependentUpon>HunliList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MoKuai_Hunli\HunliPayments.aspx.cs">
+      <DependentUpon>HunliPayments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MoKuai_Hunli\HunliPayments.aspx.designer.cs">
+      <DependentUpon>HunliPayments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MoKuai_Report\ReportMain.aspx.cs">
+      <DependentUpon>ReportMain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MoKuai_Report\ReportMain.aspx.designer.cs">
+      <DependentUpon>ReportMain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MoKuai_Hunli\taginput.aspx.cs">
+      <DependentUpon>taginput.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MoKuai_Hunli\taginput.aspx.designer.cs">
+      <DependentUpon>taginput.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MoKuai_Kehu\Kehu.Master.cs">
+      <DependentUpon>Kehu.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MoKuai_Kehu\Kehu.Master.designer.cs">
+      <DependentUpon>Kehu.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MoKuai_Kehu\KehuEdit.aspx.cs">
+      <DependentUpon>KehuEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MoKuai_Kehu\KehuEdit.aspx.designer.cs">
+      <DependentUpon>KehuEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MoKuai_Kehu\KehuFollowBussiness.aspx.cs">
+      <DependentUpon>KehuFollowBussiness.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MoKuai_Kehu\KehuFollowBussiness.aspx.designer.cs">
+      <DependentUpon>KehuFollowBussiness.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MoKuai_Kehu\KehuFollowWedding.aspx.cs">
+      <DependentUpon>KehuFollowWedding.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MoKuai_Kehu\KehuFollowWedding.aspx.designer.cs">
+      <DependentUpon>KehuFollowWedding.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MoKuai_Kehu\KehuList.aspx.cs">
+      <DependentUpon>KehuList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MoKuai_Kehu\KehuList.aspx.designer.cs">
+      <DependentUpon>KehuList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MoKuai_Kehu\KehuListAudit.aspx.cs">
+      <DependentUpon>KehuListAudit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MoKuai_Kehu\KehuListAudit.aspx.designer.cs">
+      <DependentUpon>KehuListAudit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MoKuai_Report\ReportMuban.Master.cs">
+      <DependentUpon>ReportMuban.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MoKuai_Report\ReportMuban.Master.designer.cs">
+      <DependentUpon>ReportMuban.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MoKuai_Rili\crudEventList.ashx.cs">
+      <DependentUpon>crudEventList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="MoKuai_Rili\EventList.aspx.cs">
+      <DependentUpon>EventList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MoKuai_Rili\EventList.aspx.designer.cs">
+      <DependentUpon>EventList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MoKuai_Rili\events.ashx.cs">
+      <DependentUpon>events.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="MoKuai_Rili\Rili.aspx.cs">
+      <DependentUpon>Rili.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MoKuai_Rili\Rili.aspx.designer.cs">
+      <DependentUpon>Rili.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MoKuai_Rili\RiliMuban.Master.cs">
+      <DependentUpon>RiliMuban.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MoKuai_Rili\RiliMuban.Master.designer.cs">
+      <DependentUpon>RiliMuban.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MoKuai_Shangwu\Shangwu.ashx.cs">
+      <DependentUpon>Shangwu.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="MoKuai_Shangwu\Shangwu.Master.cs">
+      <DependentUpon>Shangwu.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MoKuai_Shangwu\Shangwu.Master.designer.cs">
+      <DependentUpon>Shangwu.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MoKuai_Shangwu\ShangwuAudit.aspx.cs">
+      <DependentUpon>ShangwuAudit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MoKuai_Shangwu\ShangwuAudit.aspx.designer.cs">
+      <DependentUpon>ShangwuAudit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MoKuai_Shangwu\ShangwuEdit.aspx.cs">
+      <DependentUpon>ShangwuEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MoKuai_Shangwu\ShangwuEdit.aspx.designer.cs">
+      <DependentUpon>ShangwuEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MoKuai_Shangwu\ShangwuKehuList.aspx.cs">
+      <DependentUpon>ShangwuKehuList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MoKuai_Shangwu\ShangwuKehuList.aspx.designer.cs">
+      <DependentUpon>ShangwuKehuList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MoKuai_Shangwu\ShangwuList.aspx.cs">
+      <DependentUpon>ShangwuList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MoKuai_Shangwu\ShangwuList.aspx.designer.cs">
+      <DependentUpon>ShangwuList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MoKuai_Shangwu\ShangwuPayments.aspx.cs">
+      <DependentUpon>ShangwuPayments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MoKuai_Shangwu\ShangwuPayments.aspx.designer.cs">
+      <DependentUpon>ShangwuPayments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MoKuai_Shangwu\SWAuditFinance.aspx.cs">
+      <DependentUpon>SWAuditFinance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MoKuai_Shangwu\SWAuditFinance.aspx.designer.cs">
+      <DependentUpon>SWAuditFinance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MoKuai_Shangwu\upload.aspx.cs">
+      <DependentUpon>upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MoKuai_Shangwu\upload.aspx.designer.cs">
+      <DependentUpon>upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Register\pasReset.aspx.cs">
+      <DependentUpon>pasReset.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register\pasReset.aspx.designer.cs">
+      <DependentUpon>pasReset.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Register\pwService.aspx.cs">
+      <DependentUpon>pwService.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register\pwService.aspx.designer.cs">
+      <DependentUpon>pwService.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\LinqOrder.cs" />
+    <Compile Include="Tools\MailSender.cs" />
+    <Compile Include="Tools\Security.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Generate\" />
+    <Folder Include="upload\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="datetimepicker\less\datetimepicker.less" />
+    <None Include="dbml\ebsDB.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>ebsDB.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Default.ashx" />
+    <None Include="fonts\glyphicons-halflings-regular.eot" />
+    <None Include="fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="fonts\glyphicons-halflings-regular.woff" />
+    <None Include="fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="font\font-awesome\fonts\fontawesome-webfont.eot" />
+    <None Include="font\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <None Include="font\font-awesome\fonts\fontawesome-webfont.woff" />
+    <None Include="font\font-awesome\fonts\FontAwesome.otf" />
+    <None Include="font\font-awesome\less\bordered-pulled.less" />
+    <None Include="font\font-awesome\less\core.less" />
+    <None Include="font\font-awesome\less\fixed-width.less" />
+    <None Include="font\font-awesome\less\font-awesome.less" />
+    <None Include="font\font-awesome\less\icons.less" />
+    <None Include="font\font-awesome\less\larger.less" />
+    <None Include="font\font-awesome\less\list.less" />
+    <None Include="font\font-awesome\less\mixins.less" />
+    <None Include="font\font-awesome\less\path.less" />
+    <None Include="font\font-awesome\less\rotated-flipped.less" />
+    <None Include="font\font-awesome\less\spinning.less" />
+    <None Include="font\font-awesome\less\stacked.less" />
+    <None Include="font\font-awesome\less\variables.less" />
+    <None Include="font\font-awesome\scss\font-awesome.scss" />
+    <None Include="font\font-awesome\scss\_bordered-pulled.scss" />
+    <None Include="font\font-awesome\scss\_core.scss" />
+    <None Include="font\font-awesome\scss\_fixed-width.scss" />
+    <None Include="font\font-awesome\scss\_icons.scss" />
+    <None Include="font\font-awesome\scss\_larger.scss" />
+    <None Include="font\font-awesome\scss\_list.scss" />
+    <None Include="font\font-awesome\scss\_mixins.scss" />
+    <None Include="font\font-awesome\scss\_path.scss" />
+    <None Include="font\font-awesome\scss\_rotated-flipped.scss" />
+    <None Include="font\font-awesome\scss\_spinning.scss" />
+    <None Include="font\font-awesome\scss\_stacked.scss" />
+    <None Include="font\font-awesome\scss\_variables.scss" />
+    <Content Include="MoKuai_admin\admin.Master" />
+    <Content Include="MoKuai_Kehu\Kehu.Master" />
+    <Content Include="MoKuai_Hunli\Hunli.Master" />
+    <Content Include="MoKuai_Hunli\HunliAjax.ashx" />
+    <Content Include="MoKuai_Hunli\HLPaymentAjax.ashx" />
+    <Content Include="MoKuai_Report\ReportMuban.Master" />
+    <None Include="MoKuai_Report\Template-财务婚宴订单明细报表.xlsx" />
+    <None Include="MoKuai_Rili\components\bootstrap3\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="MoKuai_Rili\components\bootstrap3\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="MoKuai_Rili\components\bootstrap3\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="MoKuai_Rili\events.ashx" />
+    <Content Include="MoKuai_Rili\crudEventList.ashx" />
+    <None Include="MoKuai_Rili\events.json" />
+    <None Include="MoKuai_Rili\less\calendar.less" />
+    <None Include="MoKuai_Rili\less\day.less" />
+    <None Include="MoKuai_Rili\less\events.less" />
+    <None Include="MoKuai_Rili\less\grid.less" />
+    <None Include="MoKuai_Rili\less\month.less" />
+    <None Include="MoKuai_Rili\less\theme.less" />
+    <None Include="MoKuai_Rili\less\variables.less" />
+    <None Include="MoKuai_Rili\less\week.less" />
+    <Content Include="MoKuai_Rili\RiliMuban.Master" />
+    <None Include="MoKuai_Rili\日历导入工具.xlsx" />
+    <Content Include="MoKuai_Shangwu\Shangwu.Master" />
+    <Content Include="MoKuai_Shangwu\Shangwu.ashx" />
+    <None Include="Scripts\jQuery-Knob\knob.jquery.json" />
+    <None Include="Scripts\jQuery-Knob\README.md" />
+    <None Include="Scripts\select2-3.5.2\.gitignore" />
+    <None Include="Scripts\select2-3.5.2\bower.json" />
+    <None Include="Scripts\select2-3.5.2\component.json" />
+    <None Include="Scripts\select2-3.5.2\composer.json" />
+    <None Include="Scripts\select2-3.5.2\CONTRIBUTING.md" />
+    <None Include="Scripts\select2-3.5.2\LICENSE" />
+    <None Include="Scripts\select2-3.5.2\package.json" />
+    <None Include="Scripts\select2-3.5.2\README.md" />
+    <None Include="Scripts\select2-3.5.2\release.sh" />
+    <None Include="Scripts\select2-3.5.2\select2.jquery.json" />
+    <None Include="Scripts\select2-3.5.2\select2_locale_en.js.template" />
+    <None Include="Styles\assets\fonts\jquery.filer-icons\jquery-filer.eot" />
+    <None Include="Styles\assets\fonts\jquery.filer-icons\jquery-filer.ttf" />
+    <None Include="Styles\assets\fonts\jquery.filer-icons\jquery-filer.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="dbml\ebsDB.dbml.layout">
+      <DependentUpon>ebsDB.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1119</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

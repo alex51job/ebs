@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 18, 30.25" name="ebsDB">
+  <DataContextMoniker Name="/ebsDBData" />
+  <nestedChildShapes>
+    <classShape Id="7eea0474-77cc-4465-b366-6b42f9128410" absoluteBounds="12.75, 0.75, 2, 2.9086836751302081">
+      <DataClassMoniker Name="/ebsDBData/tbUsers" />
+      <nestedChildShapes>
+        <elementListCompartment Id="95d3850d-cc85-4ad5-93c2-d81f56c0202d" absoluteBounds="12.765, 1.21, 1.9700000000000002, 2.348683675130208" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="175c6283-1d18-42de-9519-92f82d1bed54" absoluteBounds="12.75, 4.75, 2, 1.3805261230468746">
+      <DataClassMoniker Name="/ebsDBData/tbSysRole" />
+      <nestedChildShapes>
+        <elementListCompartment Id="937a6381-de73-42f1-8f86-ee55f1559e25" absoluteBounds="12.765, 5.21, 1.9700000000000002, 0.820526123046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6af43182-9db1-4b8c-9d01-b31f8d6b766a" absoluteBounds="12.75, 7.75, 2, 1.5715458170572916">
+      <DataClassMoniker Name="/ebsDBData/tbSysVenue" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a89163e0-01f7-4158-b442-44d847da3617" absoluteBounds="12.765, 8.21, 1.9700000000000002, 1.0115458170572915" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3ced67b4-b580-4716-ab83-bf71414c776a" absoluteBounds="12.75, 10.75, 2, 1.7625655110677094">
+      <DataClassMoniker Name="/ebsDBData/tbSysMenu" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c96cf13b-78ad-482d-9829-c78c83b83b1c" absoluteBounds="12.765, 11.21, 1.9700000000000002, 1.2025655110677083" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c94153ea-2971-4e1b-ab3b-ed350c4fbff1" absoluteBounds="9.75, 13.75, 2, 1.1895064290364594">
+      <DataClassMoniker Name="/ebsDBData/tbSysMendian" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dcab88f0-c98e-44f5-9d47-87cfae835eea" absoluteBounds="9.765, 14.21, 1.9700000000000002, 0.62950642903645826" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4dc217b2-7030-4649-b788-07957b93bf0b" absoluteBounds="12.75, 13.75, 2, 1.1895064290364594">
+      <DataClassMoniker Name="/ebsDBData/tbSysYishiChangdi" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ebb4b3a7-ce63-410e-a65c-ad9c19e983b0" absoluteBounds="12.765, 14.21, 1.9700000000000002, 0.62950642903645826" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="499e1cf2-926a-4f59-9e0b-fc6e3119693a" absoluteBounds="0.75, 14.75, 2, 1.5715458170572951">
+      <DataClassMoniker Name="/ebsDBData/tbSysHunqinMenu" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f03cf4fc-842e-492b-a74a-e24986db7e4d" absoluteBounds="0.76500000000000012, 15.21, 1.9700000000000002, 1.0115458170572915" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e326edb6-d254-4905-af9b-ce61141859c4" absoluteBounds="15.75, 0.75, 2, 1.3805261230468751">
+      <DataClassMoniker Name="/ebsDBData/tbSysServicesHY" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5cc99431-601f-4b42-a5a1-c0a55b1f1e0b" absoluteBounds="15.765, 1.2100000000000009, 1.9700000000000002, 0.820526123046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="04b0ae1f-86f0-4c36-a83d-f629be9f722f" absoluteBounds="15.75, 3.75, 2, 1.3805261230468746">
+      <DataClassMoniker Name="/ebsDBData/tbSysServicesHQ" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8f17e4dd-cdb8-4a9c-958d-5f6ef995ea1d" absoluteBounds="15.765, 4.2100000000000009, 1.9700000000000002, 0.820526123046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="573c0264-9160-4bcd-9db9-9d547fc71926" absoluteBounds="3.5, 1.375, 2, 2.5266442871093751">
+      <DataClassMoniker Name="/ebsDBData/AuditRecords" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9ad9a64a-97c7-41ce-9a77-8911a6e3816e" absoluteBounds="3.515, 1.8350000000000009, 1.9700000000000002, 1.966644287109375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f887dbef-892f-4787-b0fe-d9e5a8aea068" absoluteBounds="3.75, 15.75, 2, 1.7625655110677094">
+      <DataClassMoniker Name="/ebsDBData/tbSysAuditConfig" />
+      <nestedChildShapes>
+        <elementListCompartment Id="55bfe33d-ea02-4bbb-a707-6e50e579d9ca" absoluteBounds="3.7650000000000006, 16.21, 1.9700000000000002, 1.2025655110677083" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4edd318e-3ff7-49d3-8614-a53d4d556a85" absoluteBounds="3.5, 10.625, 2, 2.5266442871093755">
+      <DataClassMoniker Name="/ebsDBData/WeddingExtraPayContent" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ec58ad5c-b663-4142-b6a8-28519da84d57" absoluteBounds="3.5149999999999997, 11.085, 1.9700000000000002, 1.966644287109375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9aa308ba-69f6-4994-83f7-5509e0f7b10e" absoluteBounds="3.5, 4.75, 2, 2.3356245930989576">
+      <DataClassMoniker Name="/ebsDBData/WeddingOrdersLogs" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fca61c8e-1903-4c1d-92e7-9e6b2f48dda3" absoluteBounds="3.5149999999999997, 5.2100000000000009, 1.9700000000000002, 1.7756245930989583" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ea054d35-0907-4a8c-8560-b4b1add5376e" absoluteBounds="15.75, 6.75, 2, 1.5715458170572916">
+      <DataClassMoniker Name="/ebsDBData/tbWeddingOrdersRevision" />
+      <nestedChildShapes>
+        <elementListCompartment Id="44915195-93b4-49f2-ba0f-b1b0c27e958e" absoluteBounds="15.765, 7.2100000000000009, 1.9700000000000002, 1.0115458170572915" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8b4d3a86-957c-4e9a-b68b-66d2bf909108" absoluteBounds="6.75, 15.75, 2, 1.3805261230468773">
+      <DataClassMoniker Name="/ebsDBData/tbSysAuditModifyConfig" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0a3326d3-f853-41e8-b71d-eff0ff20ec3f" absoluteBounds="6.7650000000000006, 16.21, 1.9700000000000002, 0.820526123046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6aacb7f0-3720-4ac2-89ff-0ff3fe6897d9" absoluteBounds="12.75, 15.875, 2, 1.3805261230468773">
+      <DataClassMoniker Name="/ebsDBData/tbSysStandardWeddingDateLevel" />
+      <nestedChildShapes>
+        <elementListCompartment Id="71ea3c56-faed-471a-9513-9e26a2e57f09" absoluteBounds="12.765, 16.335, 1.9700000000000002, 0.820526123046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="61f62e3a-5916-41dc-ad30-f54bdb3fe695" absoluteBounds="9.75, 15.75, 2, 1.5715458170572951">
+      <DataClassMoniker Name="/ebsDBData/tbSysStandardWeddingPrice" />
+      <nestedChildShapes>
+        <elementListCompartment Id="71f820d7-9cbd-43c8-8c3d-2f55db49f9ed" absoluteBounds="9.765, 16.21, 1.9700000000000002, 1.0115458170572915" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d60e76da-19e3-407f-90ca-0e2d9c569922" absoluteBounds="3.5, 18, 2, 1.1895064290364594">
+      <DataClassMoniker Name="/ebsDBData/tbSysEventType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e23a9790-5302-4b85-b3f0-b41d9e3aa876" absoluteBounds="3.5149999999999997, 18.46, 1.9700000000000002, 0.62950642903645826" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1298bdf4-4b04-4553-9086-7593d1c8f4a9" absoluteBounds="6.75, 13.625, 2, 1.3805261230468755">
+      <DataClassMoniker Name="/ebsDBData/tbSysQudao" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a3951c93-8e24-4b63-b3eb-9f1f8534b616" absoluteBounds="6.765, 14.085, 1.9700000000000002, 0.820526123046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a617e697-cdd7-41c4-969f-17539e5b4a80" absoluteBounds="6.75, 7.5, 2, 5.3919396972656255">
+      <DataClassMoniker Name="/ebsDBData/Customers" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5e5f7004-db6a-403f-a2e9-fceaa3162be7" absoluteBounds="6.765, 7.9600000000000009, 1.9700000000000002, 4.831939697265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="78708834-ffff-4eeb-a776-0699d9494d6d" absoluteBounds="9.75, 7.875, 2, 2.7176639811197916">
+      <DataClassMoniker Name="/ebsDBData/CustomerFollowBySales" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9147d32f-6d7c-40b5-a314-301b85816673" absoluteBounds="9.765, 8.335, 1.9700000000000002, 2.1576639811197915" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.75 : 9.24120198567708); (9.75 : 9.24120198567708)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ebsDBData/Customers/Customers_CustomerFollowBySales" />
+      <nodes>
+        <classShapeMoniker Id="a617e697-cdd7-41c4-969f-17539e5b4a80" />
+        <classShapeMoniker Id="78708834-ffff-4eeb-a776-0699d9494d6d" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="4a440869-fc22-4cd5-a5e9-dcf0bbf77582" absoluteBounds="9.5, 11.125, 2, 1.9535852050781255">
+      <DataClassMoniker Name="/ebsDBData/CustomerFollowBySales_Bussiness" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7b6c2054-3576-4f79-a3ce-a3d5f910e273" absoluteBounds="9.515, 11.585, 1.9700000000000002, 1.393585205078125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.75 : 12.2647198486328); (9.5 : 12.2647198486328)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ebsDBData/Customers/Customers_CustomerFollowBySales_Bussiness" />
+      <nodes>
+        <classShapeMoniker Id="a617e697-cdd7-41c4-969f-17539e5b4a80" />
+        <classShapeMoniker Id="4a440869-fc22-4cd5-a5e9-dcf0bbf77582" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="a5e7ce7d-7005-4958-9e7c-cea06e48b9ba" absoluteBounds="10, 5.375, 2, 1.7625655110677077">
+      <DataClassMoniker Name="/ebsDBData/CustomerRecords" />
+      <nestedChildShapes>
+        <elementListCompartment Id="82408b9f-4f0d-446a-85dd-219e4c9645ec" absoluteBounds="10.015, 5.835, 1.9700000000000002, 1.2025655110677083" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.75 : 10.8588319905599); (11.90625 : 10.8588319905599); (11.90625 : 7.13756551106771)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ebsDBData/Customers/Customers_CustomerRecords" />
+      <nodes>
+        <classShapeMoniker Id="a617e697-cdd7-41c4-969f-17539e5b4a80" />
+        <classShapeMoniker Id="a5e7ce7d-7005-4958-9e7c-cea06e48b9ba" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="1eae0ba3-9a96-4166-a193-f41860b57d1d" absoluteBounds="9.875, 2.75, 2, 2.3356245930989576">
+      <DataClassMoniker Name="/ebsDBData/CustomerFollowByKefu" />
+      <nestedChildShapes>
+        <elementListCompartment Id="586fa1f0-e3c5-453a-b90e-3c15818d4e54" absoluteBounds="9.89, 3.21, 1.9700000000000002, 1.7756245930989583" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.75 : 7.5); (9.125 : 7.125); (9.125 : 3.91781229654948); (9.875 : 3.91781229654948)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ebsDBData/Customers/Customers_CustomerFollowByKefu" />
+      <nodes>
+        <classShapeMoniker Id="a617e697-cdd7-41c4-969f-17539e5b4a80" />
+        <classShapeMoniker Id="1eae0ba3-9a96-4166-a193-f41860b57d1d" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="10b5199d-da7a-4d1a-afdb-2e261d2807b0" absoluteBounds="3.75, 20.125, 2, 3.2907230631510451">
+      <DataClassMoniker Name="/ebsDBData/BussinessEventFormat" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0a077ec1-41bb-4666-a8ca-f0da8ef4a2a0" absoluteBounds="3.765, 20.585, 1.9700000000000002, 2.7307230631510415" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d87cd6e8-14c8-46e2-8fde-f6551b413aa4" absoluteBounds="6.125, 18.125, 2, 1.1895064290364594">
+      <DataClassMoniker Name="/ebsDBData/tbSysYongcan" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0707868e-c42b-45c9-85d1-b012caef9890" absoluteBounds="6.1400000000000006, 18.585, 1.9700000000000002, 0.62950642903645826" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2766606a-3604-494b-9222-161500056326" absoluteBounds="6, 20.125, 2, 1.3805261230468773">
+      <DataClassMoniker Name="/ebsDBData/tbSysAuditConfig_Bussiness" />
+      <nestedChildShapes>
+        <elementListCompartment Id="84d67a1f-be59-4989-abe5-dcdf72a8f9a4" absoluteBounds="6.0150000000000006, 20.585, 1.9700000000000002, 0.820526123046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="70d429f6-318d-4dc8-8562-e41a97b13065" isExpanded="false" absoluteBounds="3.75, 24, 2, 0.45">
+      <DataClassMoniker Name="/ebsDBData/BussinessAuditRecords" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0f5aa27e-cf07-471c-879d-b68a272ac050" absoluteBounds="3.7649999999999997, 24.46, 1.9700000000000002, 1.966644287109375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="99c2580b-a517-4530-a0ca-3daa334ce257" absoluteBounds="8.875, 18.125, 2, 1.5715458170572951">
+      <DataClassMoniker Name="/ebsDBData/BussinessAuditRevision" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c70f4f1d-e427-4275-9df4-614b0252cfd1" absoluteBounds="8.89, 18.585, 1.9700000000000002, 1.0115458170572915" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2f70b588-d712-48f5-9c0b-9f2cba0c0877" absoluteBounds="6.125, 1.375, 2, 3.8637821451822916">
+      <DataClassMoniker Name="/ebsDBData/tbRili" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4a80d687-af6c-448e-8256-893cb7de8cf2" absoluteBounds="6.14, 1.835, 1.9700000000000002, 3.3037821451822915" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4f067f5c-051c-4492-867f-a6fd9c937f93" absoluteBounds="3.625, 24.875, 2, 2.3356245930989594">
+      <DataClassMoniker Name="/ebsDBData/BussinessOrderLogs" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cc19a0e2-cf13-42c2-a369-800ba137f982" absoluteBounds="3.64, 25.335, 1.9700000000000002, 1.7756245930989583" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="15f16e7b-c96d-4855-95a9-59811654e86b" absoluteBounds="6.75, 23.375, 2, 2.1446048990885451">
+      <DataClassMoniker Name="/ebsDBData/BussinessPayment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="aaaf3e4e-abc6-4d6d-b99f-f772bc2d983e" absoluteBounds="6.765, 23.835, 1.9700000000000002, 1.5846048990885415" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="748992a2-2fdb-49e4-a310-5ed70c5014e8" absoluteBounds="1, 19.5, 2, 6.3470381673177076">
+      <DataClassMoniker Name="/ebsDBData/Bussiness" />
+      <nestedChildShapes>
+        <elementListCompartment Id="658d0c72-3049-4dd0-bdfa-dbd69d690733" absoluteBounds="1.0150000000000001, 19.96, 1.9700000000000002, 5.787038167317708" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3 : 21.7703615315755); (3.75 : 21.7703615315755)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ebsDBData/Bussiness/Bussiness_BussinessEventFormat" />
+      <nodes>
+        <classShapeMoniker Id="748992a2-2fdb-49e4-a310-5ed70c5014e8" />
+        <classShapeMoniker Id="10b5199d-da7a-4d1a-afdb-2e261d2807b0" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3 : 24.225); (3.75 : 24.225)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ebsDBData/Bussiness/Bussiness_BussinessAuditRecords" />
+      <nodes>
+        <classShapeMoniker Id="748992a2-2fdb-49e4-a310-5ed70c5014e8" />
+        <classShapeMoniker Id="70d429f6-318d-4dc8-8562-e41a97b13065" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3 : 25.3610190836589); (3.625 : 25.3610190836589)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ebsDBData/Bussiness/Bussiness_BussinessOrderLogs" />
+      <nodes>
+        <classShapeMoniker Id="748992a2-2fdb-49e4-a310-5ed70c5014e8" />
+        <classShapeMoniker Id="4f067f5c-051c-4492-867f-a6fd9c937f93" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3 : 23.7078615315755); (6.75 : 23.7078615315755)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ebsDBData/Bussiness/Bussiness_BussinessPayment" />
+      <nodes>
+        <classShapeMoniker Id="748992a2-2fdb-49e4-a310-5ed70c5014e8" />
+        <classShapeMoniker Id="15f16e7b-c96d-4855-95a9-59811654e86b" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="df08e5ef-886d-4544-b9fd-aefab1e28360" absoluteBounds="9.875, 21.375, 2, 3.4817427571614581">
+      <DataClassMoniker Name="/ebsDBData/BussinessAdditionalForSW" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0dd70371-9854-4f64-be47-f167f3f0ed36" absoluteBounds="9.89, 21.835, 1.9700000000000002, 2.921742757161458" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="141eb507-ba9b-42c0-b580-6443912f52c4" absoluteBounds="3, 28.25, 2, 1.7625655110677081">
+      <DataClassMoniker Name="/ebsDBData/BussinessFiles" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e418666e-166e-44f9-a0d0-e511e5fe9ce7" absoluteBounds="3.015, 28.71, 1.9700000000000002, 1.2025655110677083" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="050a524f-15d6-48cb-9662-4f490f88b428" absoluteBounds="5.625, 28.25, 2, 1.7625655110677081">
+      <DataClassMoniker Name="/ebsDBData/WeddingFiles" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ced4eb80-8c85-4c74-a6f8-e1c7b6cbbff9" absoluteBounds="5.64, 28.71, 1.9700000000000002, 1.2025655110677083" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ec4f7d25-6dbe-4af8-b5f6-1cfe4728451d" absoluteBounds="0.5, 1.875, 2, 9.7853926595052076">
+      <DataClassMoniker Name="/ebsDBData/WeddingOrders" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a8a63e68-a20d-41fd-9134-018d283bd4f7" absoluteBounds="0.51500000000000012, 2.335, 1.9700000000000002, 9.2253926595052071" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.5 : 2.88832214355469); (3.5 : 2.88832214355469)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ebsDBData/WeddingOrders/WeddingOrders_AuditRecords" />
+      <nodes>
+        <classShapeMoniker Id="ec4f7d25-6dbe-4af8-b5f6-1cfe4728451d" />
+        <classShapeMoniker Id="573c0264-9160-4bcd-9db9-9d547fc71926" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.5 : 11.1426963297526); (3.5 : 11.1426963297526)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ebsDBData/WeddingOrders/WeddingOrders_WeddingExtraPayContent" />
+      <nodes>
+        <classShapeMoniker Id="ec4f7d25-6dbe-4af8-b5f6-1cfe4728451d" />
+        <classShapeMoniker Id="4edd318e-3ff7-49d3-8614-a53d4d556a85" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.5 : 5.91781229654948); (3.5 : 5.91781229654948)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ebsDBData/WeddingOrders/WeddingOrders_WeddingOrdersLogs" />
+      <nodes>
+        <classShapeMoniker Id="ec4f7d25-6dbe-4af8-b5f6-1cfe4728451d" />
+        <classShapeMoniker Id="9aa308ba-69f6-4994-83f7-5509e0f7b10e" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="d24d5b12-dab4-4e38-82c7-d2587e4d5f07" absoluteBounds="3.5, 7.625, 2, 2.3356245930989585">
+      <DataClassMoniker Name="/ebsDBData/WeddingPayment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fabf6bf1-c3e8-4085-9f07-f5b41026780b" absoluteBounds="3.5149999999999997, 8.085, 1.9700000000000002, 1.7756245930989585" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.5 : 8.79281229654948); (3.5 : 8.79281229654948)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ebsDBData/WeddingOrders/WeddingOrders_WeddingPayment" />
+      <nodes>
+        <classShapeMoniker Id="ec4f7d25-6dbe-4af8-b5f6-1cfe4728451d" />
+        <classShapeMoniker Id="d24d5b12-dab4-4e38-82c7-d2587e4d5f07" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
