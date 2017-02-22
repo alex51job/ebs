@@ -132,8 +132,8 @@ namespace ebs.MoKuai_Hunli
 
 
                 }
-
-                string result = string.Format("{{venue:'{0}',level:'{1}',cate:'{2}',price:'{3}'}}", "", "", "", "9999999999");
+                string lowCost = ComCls.getAppSetting("lowCost");
+                string result = string.Format("{{venue:'{0}',level:'{1}',cate:'{2}',price:'{3}'}}", "", "", "", lowCost);
                 //{venue:'Ating',Level:'A',Date:'黄道吉日+节假日+旺季'}
                 context.Response.Write(result);
             }
@@ -149,35 +149,30 @@ namespace ebs.MoKuai_Hunli
             try
             {
                 double CurrentPrice = Convert.ToDouble(context.Request["currentPrice"]);
-                double standardPrice = Convert.ToDouble(context.Request["standardPrice"]);
+                double standardPrice = Convert.ToDouble(ComCls.getAppSetting("lowCost"));
                 StringBuilder sb = new StringBuilder("{");
                 using (ebsDBData db = new ebsDBData())
                 {
 
                     sb.AppendFormat("StandardPrice:'{0}',", standardPrice.ToString("N"));
                     sb.Append("AuditNeed:[");
-                    var auditNeeds = db.tbSysAuditConfig.OrderBy(q => q.priority).ToList();
+                    List<string> roles = ComCls.getAppSetting("needAudit").Split(',').ToList();
+                    var auditNeeds = db.tbSysAuditConfig.Where(q=> roles.Contains(q.NeedRole)).OrderBy(q => q.priority).ToList();
                     int i = 1;
                     foreach (var item in auditNeeds)
                     {
-                        if (item.ConditionMin * standardPrice <= CurrentPrice && item.ConditionMax * standardPrice > CurrentPrice)
+                        //if (item.ConditionMin * standardPrice <= CurrentPrice && item.ConditionMax * standardPrice > CurrentPrice)
+                        //{
+                        sb.Append("{");
+                        sb.AppendFormat("Role:'{0}',Min:'{1}',Max:'{2}'", item.NeedRole, (item.ConditionMin * standardPrice).ToString("N"), (item.ConditionMax * standardPrice).ToString("N"));
+                        sb.Append("}");
+
+                        if (i != auditNeeds.Count)
                         {
-                            if (item.NeedRole == "文员")
-                            {
-                                continue;
-                            }
-                            sb.Append("{");
-                            sb.AppendFormat("Role:'{0}',Min:'{1}',Max:'{2}'", item.NeedRole, (item.ConditionMin * standardPrice).ToString("N"), (item.ConditionMax * standardPrice).ToString("N"));
-                            sb.Append("}");
-                            if (item.NeedRole == "不可提交")
-                            {
-                                break;
-                            }
-                            if (i != auditNeeds.Count)
-                            {
-                                sb.Append(",");
-                            }
+                            sb.Append(",");
                         }
+
+                        //}
                     }
                     sb.Append("]}");
                     //{StandardPrice:'',AuditNeed:[{Role:'f',Min:'1',Max:'2'},{Role:'f',Min:'1',Max:'2'}]}

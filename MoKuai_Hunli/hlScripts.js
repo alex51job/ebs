@@ -576,15 +576,16 @@ function AjaxForAuditNeed() {
                     var res = eval("(" + data + ")");
                     $.each(res.AuditNeed, function (i, item) {
                         var node = "";
-                        if (item.Role == "不可提交") {
-                            node = " <small style='color:Red'>提醒：婚宴总金额 低于（" + item.Max + "） 不可提交！</small><br />"
-                        }
-                        else if (item.Role == "财务" || item.Role == "文员") {
-                            node = " <small style='color:Red'>提醒：婚宴总金额 高于（" + res.StandardPrice + "） 需" + item.Role + "审核。</small><br />";
-                        }
-                        else {
-                            node = " <small style='color:Red'>提醒：婚宴总金额 高于（" + item.Min + "），低于(" + item.Max + ") 需" + item.Role + "审核。</small><br />";
-                        }
+                        node += " <small style='color:Red'>提醒：婚宴总金额 需" + item.Role + "审核。</small><br />";
+                        //if (item.Role == "不可提交") {
+                        //    node = " <small style='color:Red'>提醒：婚宴总金额 低于（" + item.Max + "） 不可提交！</small><br />"
+                        //}
+                        //else if (item.Role == "财务" || item.Role == "文员") {
+                        //    node = " <small style='color:Red'>提醒：婚宴总金额 高于（" + res.StandardPrice + "） 需" + item.Role + "审核。</small><br />";
+                        //}
+                        //else {
+                        //    node = " <small style='color:Red'>提醒：婚宴总金额 高于（" + item.Min + "），低于(" + item.Max + ") 需" + item.Role + "审核。</small><br />";
+                        //}
                         $("#smallAlert").append($(node));
 
                     })

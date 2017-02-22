@@ -272,5 +272,18 @@ namespace ebs.commons
             public string mailAddress { get; set; }
             public string region { get; set; }
         }
+
+
+        public static string getAppSetting(string key)
+        {
+            if (System.Configuration.ConfigurationManager.AppSettings[key] != null)
+            {
+                return System.Configuration.ConfigurationManager.AppSettings[key].ToString();
+            }
+            else
+            {
+                return "";
+            }
+        }
     }
 }

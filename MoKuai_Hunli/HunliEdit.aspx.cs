@@ -245,175 +245,12 @@ namespace ebs.MoKuai_Hunli
         {
             using (ebsDBData db = new ebsDBData())
             {
-               
-              
-                    if (db.WeddingOrders.Any(q => q.ID == ID))
-                    {
-                        WeddingOrders WO = db.WeddingOrders.First(q => q.ID == ID);
-                        WO.MainID = Convert.ToInt32(ddKehu.SelectedValue);
-                        WO.Zhuangtai = "待审批";
-                        if (StatusStep == "编辑")
-                        {
-                            WO.Zhuangtai = "编辑";
-                        }
-                        WO.HunliDidian = ddHunliDidian.SelectedValue;
-                        WO.Sales = ddSales.SelectedValue;
-                        WO.HetongID = tbHetongBianhao.Text;
-                        WO.HetongDate = Convert.ToDateTime(tbHetongRiqi.Text);
-                        WO.HunliDate = Convert.ToDateTime(tbHunliRiqi.Text);
-                        WO.XinlangName = tbXinLangName.Text;
-                        WO.XinLangMB = tbXinLangShouji.Text;
-                        WO.XinNiangName = tbXinNiangName.Text;
-                        WO.XinNiangMB = tbXinNiangShouji.Text;
-                        WO.YishiChangdi = ddYishiChangdi.SelectedValue;
-                        WO.Yanhuiting = Request.Form["ctl00$MainContent$ddYanhuiting"].ToString();
-                        WO.WuWanyan = ddWuWanCan.SelectedValue;
-                        WO.CaijinDanjia = Convert.ToDouble(Request.Form["ctl00$MainContent$lbCaijinDanjia"].ToString());
-                        //WO.paymentid = tbPaymentid.Text;
 
-                        //Pay Contents
-                        WO.HunyanTaocan = ddHunliTaocan.SelectedValue;
-                        WO.CaijinDanjia = Convert.ToDouble(lbCaijinDanjia.Text);
-                        WO.CaijinZhuoshu = tbCaijinZhuoshu.Text;
-                        WO.CaijinZhekou = tbCaijinZhekou.Text;
-                        WO.JiushuiDanjia = tbJiushuiDanjia.Text;
-                        WO.JiushuiZhuoshu = tbJiushuiZhuoshu.Text;
-                        WO.JiushuiZhekou = tbJiushuiZhekou.Text;
-                        WO.HunqinTaocan = ddHunqinTaocan.SelectedValue;
-                        WO.Hunqin = tbHunqin.Text;
-                        WO.Zhuohua = tbZhuohua.Text;
-                        WO.Qita = tbQita.Text;
-                        WO.HunyanZongJine = hdHunyanZongjine.Value;
 
-                        //Payment
-                        WO.DingjinDate = Convert.ToDateTime(tbFirstPayDate.Text);
-                        WO.DingjinPercentHunyan = Convert.ToDouble(tbFirstPayBaiHY.Text);
-                        WO.DingjinPercentHunqin = Convert.ToDouble(tbFirstPayBaiHQ.Text);
-                        WO.ZhongkuanDate = Convert.ToDateTime(tbSecondPayDate.Text);
-                        WO.ZhongkuanPercentHunyan = Convert.ToDouble(tbSecondPayBaiHY.Text);
-                        WO.ZhongkuanPercentHunqin = Convert.ToDouble(tbSecondPayBaiHQ.Text);
-                        WO.WeikuanDate = Convert.ToDateTime(tbThirdPayDate.Text);
-                        WO.WeikuanPercentHunyan = Convert.ToDouble(tbThirdPayBaiHY.Text);
-                        WO.WeikuanPercentHunqin = Convert.ToDouble(tbThirdPayBaiHQ.Text);
 
-                        WO.DingjinAmountHunyan = Convert.ToDouble(tbFirstPayJineHY.Text);
-                        WO.DingjinAmoutHunqin = Convert.ToDouble(tbFirstPayJineHQ.Text);
-                        WO.ZhongkuanAmountHunqin = Convert.ToDouble(tbSecondPayJineHQ.Text);
-                        WO.ZhongkuanAmountHunyan = Convert.ToDouble(tbSecondPayJineHY.Text);
-                        WO.WeikuanAmountHunqin = Convert.ToDouble(tbThirdPayJineHQ.Text);
-                        WO.WeikuanAmountHunyan = Convert.ToDouble(tbThirdPayJineHY.Text);
-
-                        //Services
-                        WO.HunYanServices = tokenfieldHY.Value;
-                        WO.HunQinServices = tokenfieldHQ.Value;
-                        WO.BuchongXinxi = tbBuchongXinxi.Text;
-
-                        Customers Cus = db.Customers.First(q => q.ID == Convert.ToInt32(ddKehu.SelectedValue));
-                       // Cus.EventDate = tbHunliRiqi.Text;
-
-                        //Audit
-                        if (StatusStep == "提交")
-                        {
-                            double Zongjine = Convert.ToDouble(hdHunyanZongjine.Value);
-                            double StandardPrize = Convert.ToDouble(hdStandPrice.Value);
-                            
-                            tbSysAuditConfig NotAllowSubmit = db.tbSysAuditConfig.First(q => q.NeedRole == "不可提交");
-                            {
-                                if (Zongjine < NotAllowSubmit.ConditionMax * StandardPrize)
-                                {
-                                    string per = (NotAllowSubmit.ConditionMax * 100).ToString();
-                                    throw new Exception("低于低消标准的" + per + "%不可提交");
-                                }
-                            }
-
-                            tbSysAuditConfig AuditBySupervisor = db.tbSysAuditConfig.First(q => q.NeedRole == "婚宴销售主管");
-                            if (Zongjine >= AuditBySupervisor.ConditionMin * StandardPrize && Zongjine < AuditBySupervisor.ConditionMax * StandardPrize)
-                            {
-                                AuditRecords ar = new AuditRecords();
-                                ar.AuditLevel = "主管";
-                                ar.AuditResult = "待审批";
-                                ar.AuditSuggest = "";
-                                ar.AuditType = "初次提交";
-                                ar.AuditUser = "";
-                                ar.AuditPriority = AuditBySupervisor.priority; 
-                                WO.AuditRecords.Add(ar);
-                            }
-                           
-                            tbSysAuditConfig AuditByGM = db.tbSysAuditConfig.First(q => q.NeedRole == "总经理");
-                            if (Zongjine >= AuditByGM.ConditionMin * StandardPrize && Zongjine < AuditByGM.ConditionMax * StandardPrize)
-                            {
-                                AuditRecords ar = new AuditRecords();
-                                ar.AuditLevel = "总经理";
-                                ar.AuditResult = "待审批";
-                                ar.AuditSuggest = "";
-                                ar.AuditType = "初次提交";
-                                ar.AuditUser = "";
-                                 ar.AuditPriority = AuditByGM.priority;
-                                WO.AuditRecords.Add(ar);
-                            }
-
-                            tbSysAuditConfig AuditByFinance = db.tbSysAuditConfig.First(q => q.NeedRole == "财务");
-                            {
-                                if (Zongjine >= AuditByFinance.ConditionMin * StandardPrize && Zongjine < AuditByFinance.ConditionMax * StandardPrize)
-                                {
-                                    AuditRecords ar = new AuditRecords();
-                                    ar.AuditLevel = "财务";
-                                    ar.AuditResult = "待审批";
-                                    ar.AuditSuggest = "";
-                                    ar.AuditType = "初次提交";
-                                    ar.AuditUser = "";
-                                    ar.AuditPriority = AuditByFinance.priority;
-                                    WO.AuditRecords.Add(ar);
-                                }
-                               
-                            }
-                            tbSysAuditConfig AuditByWenyuan = db.tbSysAuditConfig.First(q => q.NeedRole == "文员");
-                            {
-                                if (Zongjine >= AuditByWenyuan.ConditionMin * StandardPrize && Zongjine <= AuditByWenyuan.ConditionMax * StandardPrize)
-                                {
-                                    AuditRecords ar = new AuditRecords();
-                                    ar.AuditLevel = "文员";
-                                    ar.AuditResult = "待审批";
-                                    ar.AuditSuggest = "";
-                                    ar.AuditType = "初次提交";
-                                    ar.AuditUser = "";
-                                    ar.AuditPriority = AuditByWenyuan.priority;
-                                    WO.AuditRecords.Add(ar);
-                                }
-
-                            }
-
-                            if (WO.AuditRecords != null)
-                            {
-                                db.AuditRecords.DeleteAllOnSubmit(db.AuditRecords.Where(q => q.OrderID == WO.ID));
-                                //db.AuditRecords.InsertAllOnSubmit(WO.AuditRecords);
-                            }
-
-                            //do a record
-                            var aRecord = new WeddingOrdersLogs();
-                            aRecord.Date = DateTime.Now;
-                            aRecord.UserName = currentUser.userName;
-                            aRecord.UserRole = currentUser.roles;
-                            aRecord.ActionName = "提交审批";
-                            aRecord.ActionType = "初次提交";
-                            aRecord.Comments = "";
-                            WO.WeddingOrdersLogs.Add(aRecord);
-
-                        }
-                        db.SubmitChanges();
-                     
-                }
-              
-            }
-
-        }
-
-        private void NewWeddingOrder(string StatusStep)
-        {
-          
-                using (ebsDBData db = new ebsDBData())
+                if (db.WeddingOrders.Any(q => q.ID == ID))
                 {
-                    WeddingOrders WO = new WeddingOrders();
+                    WeddingOrders WO = db.WeddingOrders.First(q => q.ID == ID);
                     WO.MainID = Convert.ToInt32(ddKehu.SelectedValue);
                     WO.Zhuangtai = "待审批";
                     if (StatusStep == "编辑")
@@ -432,20 +269,21 @@ namespace ebs.MoKuai_Hunli
                     WO.YishiChangdi = ddYishiChangdi.SelectedValue;
                     WO.Yanhuiting = Request.Form["ctl00$MainContent$ddYanhuiting"].ToString();
                     WO.WuWanyan = ddWuWanCan.SelectedValue;
-                   // WO.paymentid = tbPaymentid.Text;
+                    WO.CaijinDanjia = Convert.ToDouble(Request.Form["ctl00$MainContent$lbCaijinDanjia"].ToString());
+                    //WO.paymentid = tbPaymentid.Text;
 
                     //Pay Contents
                     WO.HunyanTaocan = ddHunliTaocan.SelectedValue;
-                    WO.CaijinDanjia = Convert.ToDouble(Request.Form["ctl00$MainContent$lbCaijinDanjia"].ToString());
+                    WO.CaijinDanjia = Convert.ToDouble(lbCaijinDanjia.Text);
                     WO.CaijinZhuoshu = tbCaijinZhuoshu.Text;
                     WO.CaijinZhekou = tbCaijinZhekou.Text;
                     WO.JiushuiDanjia = tbJiushuiDanjia.Text;
                     WO.JiushuiZhuoshu = tbJiushuiZhuoshu.Text;
                     WO.JiushuiZhekou = tbJiushuiZhekou.Text;
                     WO.HunqinTaocan = ddHunqinTaocan.SelectedValue;
-                    WO.Hunqin = tbHunqin.Text.Trim() == ""? "0" :tbHunqin.Text;
-                    WO.Zhuohua = tbZhuohua.Text.Trim() == ""? "0":tbZhuohua.Text;
-                    WO.Qita = tbQita.Text.Trim() == ""? "0":tbQita.Text;
+                    WO.Hunqin = tbHunqin.Text;
+                    WO.Zhuohua = tbZhuohua.Text;
+                    WO.Qita = tbQita.Text;
                     WO.HunyanZongJine = hdHunyanZongjine.Value;
 
                     //Payment
@@ -471,24 +309,13 @@ namespace ebs.MoKuai_Hunli
                     WO.HunQinServices = tokenfieldHQ.Value;
                     WO.BuchongXinxi = tbBuchongXinxi.Text;
 
-                    db.WeddingOrders.InsertOnSubmit(WO);
-
                     Customers Cus = db.Customers.First(q => q.ID == Convert.ToInt32(ddKehu.SelectedValue));
-                    //Cus.EventDate = tbHunliRiqi.Text;
+                    // Cus.EventDate = tbHunliRiqi.Text;
 
                     //Audit
                     if (StatusStep == "提交")
                     {
                         double Zongjine = Convert.ToDouble(hdHunyanZongjine.Value);
-                        double StandardPrice = Convert.ToDouble(hdStandPrice.Value);
-                        tbSysAuditConfig NotAllowSubmit = db.tbSysAuditConfig.First(q => q.NeedRole == "不可提交");
-                        {
-                            if (Zongjine < NotAllowSubmit.ConditionMax * StandardPrice)
-                            {
-                                string per = (NotAllowSubmit.ConditionMax*100).ToString();
-                                throw new Exception("低于低消标准的"+per+"%不可提交");
-                            }
-                        }
 
                         tbSysAuditConfig AuditBySupervisor = db.tbSysAuditConfig.First(q => q.NeedRole == "婚宴销售主管");
                         if (Zongjine >= AuditBySupervisor.ConditionMin * StandardPrice && Zongjine < AuditBySupervisor.ConditionMax * StandardPrice)
@@ -530,22 +357,62 @@ namespace ebs.MoKuai_Hunli
                                 WO.AuditRecords.Add(ar);
                             }
 
-                        }
-                        tbSysAuditConfig AuditByWenyuan = db.tbSysAuditConfig.First(q => q.NeedRole == "文员");
-                        {
-                            if (Zongjine >= AuditByWenyuan.ConditionMin * StandardPrice && Zongjine <= AuditByWenyuan.ConditionMax * StandardPrice)
-                            {
-                                AuditRecords ar = new AuditRecords();
-                                ar.AuditLevel = "文员";
-                                ar.AuditResult = "待审批";
-                                ar.AuditSuggest = "";
-                                ar.AuditType = "初次提交";
-                                ar.AuditUser = "";
-                                ar.AuditPriority = AuditByWenyuan.priority;
-                                WO.AuditRecords.Add(ar);
-                            }
+                        tbSysAuditConfig AuditBySupervisor = db.tbSysAuditConfig.First(q => q.NeedRole == "婚宴销售主管");
+                        //if (Zongjine >= AuditBySupervisor.ConditionMin * StandardPrize && Zongjine < AuditBySupervisor.ConditionMax * StandardPrize)
+                        //{
+                        AuditRecords ar = new AuditRecords();
+                        ar.AuditLevel = "主管";
+                        ar.AuditResult = "待审批";
+                        ar.AuditSuggest = "";
+                        ar.AuditType = "初次提交";
+                        ar.AuditUser = "";
+                        ar.AuditPriority = AuditBySupervisor.priority;
+                        WO.AuditRecords.Add(ar);
+                        //}
 
-                        }
+                        //tbSysAuditConfig AuditByGM = db.tbSysAuditConfig.First(q => q.NeedRole == "总经理");
+                        //if (Zongjine >= AuditByGM.ConditionMin * StandardPrize && Zongjine < AuditByGM.ConditionMax * StandardPrize)
+                        //{
+                        //    AuditRecords ar = new AuditRecords();
+                        //    ar.AuditLevel = "总经理";
+                        //    ar.AuditResult = "待审批";
+                        //    ar.AuditSuggest = "";
+                        //    ar.AuditType = "初次提交";
+                        //    ar.AuditUser = "";
+                        //     ar.AuditPriority = AuditByGM.priority;
+                        //    WO.AuditRecords.Add(ar);
+                        //}
+
+                        //tbSysAuditConfig AuditByFinance = db.tbSysAuditConfig.First(q => q.NeedRole == "财务");
+                        //{
+                        //    if (Zongjine >= AuditByFinance.ConditionMin * StandardPrize && Zongjine < AuditByFinance.ConditionMax * StandardPrize)
+                        //    {
+                        //        AuditRecords ar = new AuditRecords();
+                        //        ar.AuditLevel = "财务";
+                        //        ar.AuditResult = "待审批";
+                        //        ar.AuditSuggest = "";
+                        //        ar.AuditType = "初次提交";
+                        //        ar.AuditUser = "";
+                        //        ar.AuditPriority = AuditByFinance.priority;
+                        //        WO.AuditRecords.Add(ar);
+                        //    }
+
+                        //}
+                        tbSysAuditConfig AuditByWenyuan = db.tbSysAuditConfig.First(q => q.NeedRole == "文员");
+                        //{
+                        //if (Zongjine >= AuditByWenyuan.ConditionMin * StandardPrize && Zongjine <= AuditByWenyuan.ConditionMax * StandardPrize)
+                        //{
+                        AuditRecords ar_wy = new AuditRecords();
+                        ar_wy.AuditLevel = "文员";
+                        ar_wy.AuditResult = "待审批";
+                        ar_wy.AuditSuggest = "";
+                        ar_wy.AuditType = "初次提交";
+                        ar_wy.AuditUser = "";
+                        ar_wy.AuditPriority = AuditByWenyuan.priority;
+                        WO.AuditRecords.Add(ar_wy);
+                        //}
+
+                        // }
 
                         if (WO.AuditRecords != null)
                         {
@@ -553,6 +420,7 @@ namespace ebs.MoKuai_Hunli
                             //db.AuditRecords.InsertAllOnSubmit(WO.AuditRecords);
                         }
 
+                        //do a record
                         var aRecord = new WeddingOrdersLogs();
                         aRecord.Date = DateTime.Now;
                         aRecord.UserName = currentUser.userName;
@@ -566,7 +434,160 @@ namespace ebs.MoKuai_Hunli
                     db.SubmitChanges();
 
                 }
-          
+
+            }
+
+        }
+
+        private void NewWeddingOrder(string StatusStep)
+        {
+
+            using (ebsDBData db = new ebsDBData())
+            {
+                WeddingOrders WO = new WeddingOrders();
+                WO.MainID = Convert.ToInt32(ddKehu.SelectedValue);
+                WO.Zhuangtai = "待审批";
+                if (StatusStep == "编辑")
+                {
+                    WO.Zhuangtai = "编辑";
+                }
+                WO.HunliDidian = ddHunliDidian.SelectedValue;
+                WO.Sales = ddSales.SelectedValue;
+                WO.HetongID = tbHetongBianhao.Text;
+                WO.HetongDate = Convert.ToDateTime(tbHetongRiqi.Text);
+                WO.HunliDate = Convert.ToDateTime(tbHunliRiqi.Text);
+                WO.XinlangName = tbXinLangName.Text;
+                WO.XinLangMB = tbXinLangShouji.Text;
+                WO.XinNiangName = tbXinNiangName.Text;
+                WO.XinNiangMB = tbXinNiangShouji.Text;
+                WO.YishiChangdi = ddYishiChangdi.SelectedValue;
+                WO.Yanhuiting = Request.Form["ctl00$MainContent$ddYanhuiting"].ToString();
+                WO.WuWanyan = ddWuWanCan.SelectedValue;
+                // WO.paymentid = tbPaymentid.Text;
+
+                //Pay Contents
+                WO.HunyanTaocan = ddHunliTaocan.SelectedValue;
+                WO.CaijinDanjia = Convert.ToDouble(Request.Form["ctl00$MainContent$lbCaijinDanjia"].ToString());
+                WO.CaijinZhuoshu = tbCaijinZhuoshu.Text;
+                WO.CaijinZhekou = tbCaijinZhekou.Text;
+                WO.JiushuiDanjia = tbJiushuiDanjia.Text;
+                WO.JiushuiZhuoshu = tbJiushuiZhuoshu.Text;
+                WO.JiushuiZhekou = tbJiushuiZhekou.Text;
+                WO.HunqinTaocan = ddHunqinTaocan.SelectedValue;
+                WO.Hunqin = tbHunqin.Text.Trim() == "" ? "0" : tbHunqin.Text;
+                WO.Zhuohua = tbZhuohua.Text.Trim() == "" ? "0" : tbZhuohua.Text;
+                WO.Qita = tbQita.Text.Trim() == "" ? "0" : tbQita.Text;
+                WO.HunyanZongJine = hdHunyanZongjine.Value;
+
+                //Payment
+                WO.DingjinDate = Convert.ToDateTime(tbFirstPayDate.Text);
+                WO.DingjinPercentHunyan = Convert.ToDouble(tbFirstPayBaiHY.Text);
+                WO.DingjinPercentHunqin = Convert.ToDouble(tbFirstPayBaiHQ.Text);
+                WO.ZhongkuanDate = Convert.ToDateTime(tbSecondPayDate.Text);
+                WO.ZhongkuanPercentHunyan = Convert.ToDouble(tbSecondPayBaiHY.Text);
+                WO.ZhongkuanPercentHunqin = Convert.ToDouble(tbSecondPayBaiHQ.Text);
+                WO.WeikuanDate = Convert.ToDateTime(tbThirdPayDate.Text);
+                WO.WeikuanPercentHunyan = Convert.ToDouble(tbThirdPayBaiHY.Text);
+                WO.WeikuanPercentHunqin = Convert.ToDouble(tbThirdPayBaiHQ.Text);
+
+                WO.DingjinAmountHunyan = Convert.ToDouble(tbFirstPayJineHY.Text);
+                WO.DingjinAmoutHunqin = Convert.ToDouble(tbFirstPayJineHQ.Text);
+                WO.ZhongkuanAmountHunqin = Convert.ToDouble(tbSecondPayJineHQ.Text);
+                WO.ZhongkuanAmountHunyan = Convert.ToDouble(tbSecondPayJineHY.Text);
+                WO.WeikuanAmountHunqin = Convert.ToDouble(tbThirdPayJineHQ.Text);
+                WO.WeikuanAmountHunyan = Convert.ToDouble(tbThirdPayJineHY.Text);
+
+                //Services
+                WO.HunYanServices = tokenfieldHY.Value;
+                WO.HunQinServices = tokenfieldHQ.Value;
+                WO.BuchongXinxi = tbBuchongXinxi.Text;
+
+                db.WeddingOrders.InsertOnSubmit(WO);
+
+                Customers Cus = db.Customers.First(q => q.ID == Convert.ToInt32(ddKehu.SelectedValue));
+                //Cus.EventDate = tbHunliRiqi.Text;
+
+                //Audit
+                if (StatusStep == "提交")
+                {
+                    double Zongjine = Convert.ToDouble(hdHunyanZongjine.Value);
+                    //double StandardPrice = Convert.ToDouble(ComCls.getAppSetting("lowCost"));
+
+                    tbSysAuditConfig AuditBySupervisor = db.tbSysAuditConfig.First(q => q.NeedRole == "婚宴销售主管");
+                    //if (Zongjine >= AuditBySupervisor.ConditionMin * StandardPrice && Zongjine < AuditBySupervisor.ConditionMax * StandardPrice)
+                    //{
+                    AuditRecords ar = new AuditRecords();
+                    ar.AuditLevel = "销售主管";
+                    ar.AuditResult = "待审批";
+                    ar.AuditSuggest = "";
+                    ar.AuditType = "初次提交";
+                    ar.AuditUser = "";
+                    ar.AuditPriority = AuditBySupervisor.priority;
+                    WO.AuditRecords.Add(ar);
+                    //}
+
+                    //tbSysAuditConfig AuditByGM = db.tbSysAuditConfig.First(q => q.NeedRole == "总经理");
+                    //if (Zongjine >= AuditByGM.ConditionMin * StandardPrice && Zongjine < AuditByGM.ConditionMax * StandardPrice)
+                    //{
+                    //    AuditRecords ar = new AuditRecords();
+                    //    ar.AuditLevel = "总经理";
+                    //    ar.AuditResult = "待审批";
+                    //    ar.AuditSuggest = "";
+                    //    ar.AuditType = "初次提交";
+                    //    ar.AuditUser = "";
+                    //    ar.AuditPriority = AuditByGM.priority;
+                    //    WO.AuditRecords.Add(ar);
+                    //}
+
+                    //tbSysAuditConfig AuditByFinance = db.tbSysAuditConfig.First(q => q.NeedRole == "财务");
+                    //{
+                    //    if (Zongjine >= AuditByFinance.ConditionMin * StandardPrice)
+                    //    {
+                    //        AuditRecords ar = new AuditRecords();
+                    //        ar.AuditLevel = "财务";
+                    //        ar.AuditResult = "待审批";
+                    //        ar.AuditSuggest = "";
+                    //        ar.AuditType = "初次提交";
+                    //        ar.AuditUser = "";
+                    //        ar.AuditPriority = AuditByFinance.priority;
+                    //        WO.AuditRecords.Add(ar);
+                    //    }
+
+                    //}
+                    //{
+                    //if (Zongjine >= AuditByWenyuan.ConditionMin * StandardPrice && Zongjine <= AuditByWenyuan.ConditionMax * StandardPrice)
+                    AuditRecords ar_wy = new AuditRecords();
+                    ar_wy.AuditLevel = "文员";
+                    ar_wy.AuditResult = "待审批";
+                    ar_wy.AuditSuggest = "";
+                    ar_wy.AuditType = "初次提交";
+                    ar_wy.AuditUser = "";
+                    ar_wy.AuditPriority = AuditByWenyuan.priority;
+                    WO.AuditRecords.Add(ar_wy);
+                    // }
+
+                    // }
+
+                    if (WO.AuditRecords != null)
+                    {
+                        db.AuditRecords.DeleteAllOnSubmit(db.AuditRecords.Where(q => q.OrderID == WO.ID));
+                        //db.AuditRecords.InsertAllOnSubmit(WO.AuditRecords);
+                    }
+
+                    var aRecord = new WeddingOrdersLogs();
+                    aRecord.Date = DateTime.Now;
+                    aRecord.UserName = currentUser.userName;
+                    aRecord.UserRole = currentUser.roles;
+                    aRecord.ActionName = "提交审批";
+                    aRecord.ActionType = "初次提交";
+                    aRecord.Comments = "";
+                    WO.WeddingOrdersLogs.Add(aRecord);
+
+                }
+                db.SubmitChanges();
+
+            }
+
         }
 
         private void UpdateContractWeddingOrder()
