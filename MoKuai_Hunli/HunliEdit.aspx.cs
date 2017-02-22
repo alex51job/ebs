@@ -247,7 +247,6 @@ namespace ebs.MoKuai_Hunli
             {
 
 
-
                 if (db.WeddingOrders.Any(q => q.ID == ID))
                 {
                     WeddingOrders WO = db.WeddingOrders.First(q => q.ID == ID);
@@ -316,46 +315,16 @@ namespace ebs.MoKuai_Hunli
                     if (StatusStep == "提交")
                     {
                         double Zongjine = Convert.ToDouble(hdHunyanZongjine.Value);
+                        //double StandardPrize = Convert.ToDouble(ComCls.getAppSetting("lowCost"));
 
-                        tbSysAuditConfig AuditBySupervisor = db.tbSysAuditConfig.First(q => q.NeedRole == "婚宴销售主管");
-                        if (Zongjine >= AuditBySupervisor.ConditionMin * StandardPrice && Zongjine < AuditBySupervisor.ConditionMax * StandardPrice)
-                        {
-                            AuditRecords ar = new AuditRecords();
-                            ar.AuditLevel = "销售主管";
-                            ar.AuditResult = "待审批";
-                            ar.AuditSuggest = "";
-                            ar.AuditType = "初次提交";
-                            ar.AuditUser = "";
-                            ar.AuditPriority = AuditBySupervisor.priority;
-                            WO.AuditRecords.Add(ar);
-                        }
-
-                        tbSysAuditConfig AuditByGM = db.tbSysAuditConfig.First(q => q.NeedRole == "总经理");
-                        if (Zongjine >= AuditByGM.ConditionMin * StandardPrice && Zongjine < AuditByGM.ConditionMax * StandardPrice)
-                        {
-                            AuditRecords ar = new AuditRecords();
-                            ar.AuditLevel = "总经理";
-                            ar.AuditResult = "待审批";
-                            ar.AuditSuggest = "";
-                            ar.AuditType = "初次提交";
-                            ar.AuditUser = "";
-                            ar.AuditPriority = AuditByGM.priority;
-                            WO.AuditRecords.Add(ar);
-                        }
-
-                        tbSysAuditConfig AuditByFinance = db.tbSysAuditConfig.First(q => q.NeedRole == "财务");
-                        {
-                            if (Zongjine >= AuditByFinance.ConditionMin * StandardPrice)
-                            {
-                                AuditRecords ar = new AuditRecords();
-                                ar.AuditLevel = "财务";
-                                ar.AuditResult = "待审批";
-                                ar.AuditSuggest = "";
-                                ar.AuditType = "初次提交";
-                                ar.AuditUser = "";
-                                ar.AuditPriority = AuditByFinance.priority;
-                                WO.AuditRecords.Add(ar);
-                            }
+                        //tbSysAuditConfig NotAllowSubmit = db.tbSysAuditConfig.First(q => q.NeedRole == "不可提交");
+                        //    {
+                        //        if (Zongjine < NotAllowSubmit.ConditionMax * StandardPrize)
+                        //        {
+                        //            string per = (NotAllowSubmit.ConditionMax * 100).ToString();
+                        //            throw new Exception("低于低消标准的" + per + "%不可提交");
+                        //        }
+                        //    }
 
                         tbSysAuditConfig AuditBySupervisor = db.tbSysAuditConfig.First(q => q.NeedRole == "婚宴销售主管");
                         //if (Zongjine >= AuditBySupervisor.ConditionMin * StandardPrize && Zongjine < AuditBySupervisor.ConditionMax * StandardPrize)
@@ -512,6 +481,14 @@ namespace ebs.MoKuai_Hunli
                 {
                     double Zongjine = Convert.ToDouble(hdHunyanZongjine.Value);
                     //double StandardPrice = Convert.ToDouble(ComCls.getAppSetting("lowCost"));
+                    //tbSysAuditConfig NotAllowSubmit = db.tbSysAuditConfig.First(q => q.NeedRole == "不可提交");
+                    //{
+                    //    if (Zongjine < NotAllowSubmit.ConditionMax * StandardPrice)
+                    //    {
+                    //        string per = (NotAllowSubmit.ConditionMax * 100).ToString();
+                    //        throw new Exception("低于低消标准的" + per + "%不可提交");
+                    //    }
+                    //}
 
                     tbSysAuditConfig AuditBySupervisor = db.tbSysAuditConfig.First(q => q.NeedRole == "婚宴销售主管");
                     //if (Zongjine >= AuditBySupervisor.ConditionMin * StandardPrice && Zongjine < AuditBySupervisor.ConditionMax * StandardPrice)
@@ -554,8 +531,10 @@ namespace ebs.MoKuai_Hunli
                     //    }
 
                     //}
+                    tbSysAuditConfig AuditByWenyuan = db.tbSysAuditConfig.First(q => q.NeedRole == "文员");
                     //{
                     //if (Zongjine >= AuditByWenyuan.ConditionMin * StandardPrice && Zongjine <= AuditByWenyuan.ConditionMax * StandardPrice)
+                    //{
                     AuditRecords ar_wy = new AuditRecords();
                     ar_wy.AuditLevel = "文员";
                     ar_wy.AuditResult = "待审批";
